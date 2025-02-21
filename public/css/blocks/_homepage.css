@@ -1,0 +1,9 @@
+.home-page__container {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0rem;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}

@@ -1,0 +1,51 @@
+---
+layout: page.njk
+title: Work
+description: My work experience.
+---
+
+<section class="work-container">
+    <ul class="work__list">
+        {%- for work in collections.work -%}
+            <li class="work__item">
+                <div class="work-details">
+                    <h2 class="work__item-role">{{ work.data.role }}</h2>
+                    <h3 class="work__item-company">{{ work.data.company }}</h3>
+                    {# <p class="work__item-slogan">"{{ work.data.slogan }}"</p> #}
+                    <time class="work__item-date">
+                        {{ work.data.startDate | monthName }}
+                        {{ work.data.startDate | year }} - 
+                        {% if work.data.endDate %}
+                            {{ work.data.endDate | monthName }}
+                            {{ work.data.endDate | year }}
+                        {% else %}
+                            Present
+                        {% endif %}
+                    </time>
+
+                    {% if work.data.achievements %}
+                        <div class="work__item-achievements">
+                            <h3 class="work__item-achievements-label">🏆 Achievements</h3>
+                            <ul class="work__item-achievements-list">
+                                {%- for achievement in work.data.achievements -%}
+                                    <li class="work__item-achievement">{{ achievement }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    {% if work.data.responsibilities %}
+                        <div class="work__item-responsibilities">
+                            <h3 class="work__item-responsibilities-label">📋 Responsibilities</h3>
+                            <ul class="work__item-responsibilities-list">
+                                {%- for task in work.data.responsibilities -%}
+                                    <li class="work__item-responsibility">{{ task }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            </li>
+        {%- endfor -%}
+    </ul>
+</section>

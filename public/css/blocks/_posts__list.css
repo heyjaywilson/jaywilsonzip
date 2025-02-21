@@ -1,0 +1,98 @@
+/* Lists of posts on the homepage and posts page */
+.posts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.posts__list--see-all-container {
+  padding-top: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.posts__list--see-all {
+  font-family: var(--font-mono);
+  background-color: var(--color-cyclamen);
+  border: 4px solid var(--color-ultra-violet);
+  padding: var(--spacing-md);
+  transition: all 0.2s;
+  text-decoration: none;
+  color: var(--color-ultra-violet);
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.posts__list--see-all:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-ultra-violet);
+}
+
+.posts__list--item {
+  border: 3px solid var(--color-ultra-violet);
+  padding: var(--spacing-lg);
+  background-color: var(--color-black-dark);
+  transition: all 0.2s;
+}
+
+.posts__list--item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-saffron),
+    1rem 1rem 0 var(--color-ultra-violet), 1.5rem 1.5rem 0 var(--color-cyclamen);
+}
+
+.posts__list--item--title {
+  text-decoration: none;
+}
+
+.posts__list--item--title h3 {
+  font-family: var(--font-mono);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.posts__list--item--date,
+.posts__list--item--views {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-ultra-violet);
+  margin-bottom: var(--spacing-xs);
+}
+
+.posts__list--item--description {
+  display: block;
+  color: var(--color-black);
+  margin-top: var(--spacing-sm);
+  border-top: 2px solid var(--color-ultra-violet);
+  padding-top: var(--spacing-sm);
+}
+
+/* Most Recent Posts styles */
+.posts__item {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 2px solid var(--color-ultra-violet);
+}
+
+.post-item__title {
+  text-decoration: none;
+}
+
+.post-item__title h3 {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.post-item__date {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-ultra-violet);
+}

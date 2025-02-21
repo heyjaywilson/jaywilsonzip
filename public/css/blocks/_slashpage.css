@@ -1,0 +1,64 @@
+/* Remove the global main style and scope the layout styles to slashpage context */
+.slashpage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Add this */
+}
+
+.page-header.slashpage__header h1 {
+  background-color: var(--color-cyclamen);
+  color: var(--color-ultra-violet);
+  box-shadow: 0.4rem 0.4rem 0 var(--color-pale-azure),
+    0.8rem 0.8rem 0 var(--color-ultra-violet),
+    1.2rem 1.2rem 0 var(--color-saffron);
+}
+
+.slashpage__content-container {
+  flex: 1;
+}
+
+.slashpage__content {
+  border: 5px solid var(--color-ultra-violet);
+  padding: var(--spacing-xl);
+  position: relative;
+  background-color: var(--color-black-dark);
+}
+
+.slashpage__content h2 {
+  margin-top: var(--spacing-lg);
+}
+
+.slashpage__content h3 {
+  margin-top: var(--spacing-md);
+}
+
+.slashpage__content ul {
+  margin: 1rem 0;
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.slashpage__content ol {
+  margin: 1rem 0;
+  list-style-type: decimal;
+  padding-left: 2rem;
+}
+
+.slashpage__footer {
+  margin-top: auto; /* Push footer to bottom */
+}
+
+.slashpage__last-updated {
+  padding-top: var(--spacing-md);
+  border-top: 0.2rem solid var(--color-ultra-violet);
+  font-size: 0.875rem;
+  color: var(--color-black);
+  font-family: var(--font-mono);
+}
+
+@media screen and (max-width: 31rem) {
+  .slash-pages--footer {
+    max-width: 100%;
+  }
+}

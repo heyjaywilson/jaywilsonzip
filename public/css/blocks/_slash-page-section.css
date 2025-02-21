@@ -1,0 +1,76 @@
+/* Styles for slash page sections*/
+.slash-pages--list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.slash-pages--list--item {
+  font-family: var(--font-mono);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-ultra-violet);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: all 0.2s;
+}
+
+.slash-pages--list--item > a,
+.slash-pages--list--item > a:visited {
+  font-family: var(--font-mono);
+  text-decoration: none;
+  color: var(--color-black-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.slash-pages--list--item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-cyclamen);
+}
+
+.slash-pages--list--item > a:hover {
+  text-decoration: none;
+}
+
+/* Footer specific styles - keep it simple */
+.slash-pages--footer {
+  max-width: 55%;
+}
+
+.slash-pages--footer h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--color-black);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.slash-pages--footer h2::before {
+  content: none;
+}
+
+.slash-pages--footer .slash-pages--list {
+  padding: 0;
+  gap: var(--spacing-md);
+}
+
+.slash-pages--footer .slash-pages--list--item {
+  background: none;
+  border: none;
+  padding: var(--spacing-xs) 0;
+}
+
+.slash-pages--footer .slash-pages--list--item > a,
+.slash-pages--footer .slash-pages--list--item > a:visited {
+  color: var(--color-black);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.slash-pages--footer .slash-pages--list--item > a:hover {
+  text-decoration: underline;
+}

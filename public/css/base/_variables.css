@@ -1,0 +1,43 @@
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 30rem; /* 480px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+
+  /* Colors */
+  --color-black: #080708ff;
+  --color-black-dark: #f8f7f8ff;
+  --color-saffron: #f7c851ff;
+  --color-saffron-dark: #af8008;
+  --color-pale-azure: #70d6ffff;
+  --color-pale-azure-dark: #00668f;
+  --color-cyclamen: #ff70a6ff;
+  --color-cyclamen-dark: #8f0037;
+  --color-ultra-violet: #52489cff;
+  --color-ultra-violet-dark: #6c62b7;
+  --color-slate: #546e7a;
+  /* Status Colors */
+  --color-negative: #ff4d4dff;
+  --color-negative-dark: #cc0000;
+  --color-positive: #4caf50ff;
+  --color-positive-dark: #2e7d32;
+  --color-warning: #ffa726ff;
+  --color-warning-dark: #f57c00;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Typography */
+  --font-primary: "InnovatorGrotesk", system-ui, sans-serif;
+  --font-mono: "JetBrainsMono", monospace;
+
+  /* Layout */
+  --container-max: 75rem;
+  --content-max: 50rem;
+}

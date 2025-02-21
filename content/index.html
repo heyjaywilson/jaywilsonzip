@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: Home
+description: Home page
+---
+
+<section class="hero">
+    <div class="hero__content">
+        <p>Hey 👋</p>
+        <p>I'm a developer who likes to document his life and drink lots of coffee.</p>
+        <p>I currently work as an iOS Developer at Matter, where we make people happier. I also like to make my own apps and make apps for others.</p>
+    </div>
+</section>
+<div class="home-page__container">
+    <div class="home-page__left">
+        <section class="content-section">
+            <h2>Slashpages</h2>
+            <ul class="list--unstyled slash-pages--list">
+                {%- for page in slashpages -%}
+                    <li class="slash-pages--list--item">
+                        <a href="{{ page.url }}">/{{ page.title }}</a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </section>
+        <!-- Desktop version -->
+        <section class="content-section">
+            <h2>Other places</h2>
+            <ul class="other-places__list">
+                {%- for social in socials -%}
+                    <li class="other-places__item">
+                        <a href="{{ social.url }}" rel="me" class="other-places__link">
+                            <i class="{{ social.icon }}"></i>
+                            {{ social.name }}</a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </section>
+    </div>
+    <div class="home-page__right">
+        {# <section class="content-section">
+            <h2>Popular Posts</h2>
+            <ul class="posts__list">
+                {%- for post in popularPosts -%}
+                    <li class="posts__list--item">
+                        <a href="{{ post.url }}" class="posts__list--item--title">
+                            <h3>{{ post.title }}</h3>
+                        </a>
+                        <span class="posts__list--item--date">posted on {{ post.date }}</span>
+                        <span class="posts__list--item--views">{{ post.views }} views and counting</span>
+                        <span class="posts__list--item--description">Here's a description of the post. It'll be not static later, but for now this is what I got.</span>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </section> #}
+        <section class="content-section">
+            <h2>Most Recent Posts</h2>
+            <ul class="posts__list">
+                {%- for post in (collections.posts | reverse).slice(0,5) -%}
+                    <li class="posts__list--item">
+                        <a href="{{ post.url }}" class="posts__list--item--title">
+                            <h3>{{ post.data.title }}</h3>
+                            <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
+                            <span class="posts__list--item--description">{{ post.data.description }}</span>
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+            <div class="posts__list--see-all-container">
+                <a href="/posts" class="posts__list--see-all">See all posts</a>
+            </div>
+        </section>
+    </div>
+</div>

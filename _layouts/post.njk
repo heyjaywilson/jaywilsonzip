@@ -1,0 +1,43 @@
+---
+layout: base.njk
+---
+
+<div class="post-layout__content">
+    <header class="post-layout__header">
+        <h1>{{ title }}</h1>
+        <div class="post-layout__meta">
+            <time class="post-layout__date">{{ date | postDate }}</time>
+            <p class="post-layout__description">{{ description }}</p>
+        </div>
+    </header>
+    {{ content | safe }}
+</div>
+
+<div class="post-layout__buy-me-coffee">
+    <div class="post-layout__buy-me-coffee-content">
+        <p>If you liked this post, consider buying me a coffee.</p>
+        <div class="post-layout__bmc-button">
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+            <script type='text/javascript'>
+                kofiwidget2.init('Buy me a coffee', '#f7c851ff', 'W7W2FFDSW');
+                kofiwidget2.draw();
+            </script>
+        </div>
+        <p>Or donate to <a href="https://www.lambdalegal.org/" target="_blank">Lambda Legal</a> to help fight for trans and LGBTQIA+ rights.</p>
+    </div>
+</div>
+
+<div class="post-layout__content">
+    <p>Subscribe to my posts via your favorite feed reader.</p>
+    <div class="post-layout__subscribe-links">
+        <a href="/posts/atom.xml" target="_blank" class="post-layout__subscribe-link">
+            <i class="fa-sharp fa-regular fa-rss"></i> Atom
+        </a>
+        <a href="/posts/rss.xml" target="_blank" class="post-layout__subscribe-link">
+            <i class="fa-sharp fa-regular fa-rss"></i> RSS
+        </a>
+        <a href="/posts/feed.json" target="_blank" class="post-layout__subscribe-link">
+            <i class="fa-sharp fa-regular fa-rss"></i> JSON
+        </a>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+[build]
+  # Directory the contains the deploy ready HTML files
+  publish = "_site"
+  # Command to build the site
+  command = "npm run build"

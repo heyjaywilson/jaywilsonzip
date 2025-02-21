@@ -1,0 +1,19 @@
+---
+layout: page.njk
+title: Posts
+description: My writings, photos, and videos about anything and everything.
+---
+<section class="posts-page__content-section">
+    <ul class="posts-page__list">
+        {%- for post in collections.posts | reverse -%}
+            <li class="posts__list--item">
+                <a href="{{ post.url }}" class="posts__list--item--title">
+                    <h3>{{ post.data.title }}</h3>
+                    <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
+                    <span class="posts__list--item--description">{{ post.data.description }}</span>
+
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</section>

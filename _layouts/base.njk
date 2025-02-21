@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description or metadata.description}}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta name="fediverse:creator" content="@heyjaywilson@iosdev.space"/>
+
+    <title>{{ title or metadata.title }}</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e18a080e82.js" crossorigin="anonymous"></script>
+    <script defer data-domain="jaywilson.zip" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+    <script>
+      window.plausible = window.plausible || function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments)
+      }
+    </script>
+
+  </head>
+  <div class="banner">
+    <marquee behavior="scroll" direction="left" class="banner__text">
+      🏳️‍⚧️ TRANS RIGHTS ARE HUMAN RIGHTS 🏳️‍⚧️
+    </marquee>
+  </div>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="/" class="header__logo-container">
+          <img src="/img/me-logo.png" alt="Logo" class="header__logo">
+          <div class="header__title">
+            <span class="header__title-name">Jay Wilson</span>
+            <span class="header__title-subtitle">developer. creator. coffee drinker.</span>
+          </div>
+        </a>
+        <nav class="header__nav">
+          <a href="/posts" class="header__nav-link">Posts</a>
+          <a href="/work" class="header__nav-link">Work</a>
+          <a href="/about" class="header__nav-link">About</a>
+          <a href="/contact" class="header__nav-link header__nav-link--contact">Contact</a>
+          <a href="/subscribe" class="header__nav-link header__nav-link--subscribe">
+            <i class="fa-sharp fa-regular fa-rss"></i> Subscribe</a>
+        </nav>
+      </header>
+      <main>
+        {{ content | safe }}
+      </main>
+      <footer>
+        <section class="slash-pages--footer">
+          <h2>Slashpages</h2>
+          <ul class="list--unstyled slash-pages--list">
+            {%- for page in slashpages -%}
+              <li class="slash-pages--list--item">
+                <a href="{{ page.url }}">/{{ page.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </section>
+        <p class="footer--copyright">© {% buildYear %} CCT+ LLC</p>
+      </footer>
+    </div>
+  </body>
+</html

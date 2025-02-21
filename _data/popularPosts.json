@@ -1,0 +1,20 @@
+[
+    {
+        "url": "/posts/2024-01-16-my-first-post",
+        "title": "My First Post",
+        "date": "2024-01-16",
+        "views": 100
+    },
+    {
+        "url": "/posts/2024-01-16-my-second-post",
+        "title": "My Second Post",
+        "date": "2024-01-16",
+        "views": 200000
+    },
+    {
+        "url": "/posts/2024-01-16-my-third-post",
+        "title": "My Third Post",
+        "date": "2024-01-16",
+        "views": 300000
+    }
+]

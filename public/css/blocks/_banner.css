@@ -1,0 +1,13 @@
+.banner {
+  background-color: var(--color-black);
+  padding: var(--spacing-sm);
+  border: 0.5rem solid var(--color-cyclamen);
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.banner__text {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  color: var(--color-black-dark);
+}

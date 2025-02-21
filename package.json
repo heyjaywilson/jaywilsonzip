@@ -1,0 +1,29 @@
+{
+  "name": "jaywilsonzip",
+  "version": "1.0.0",
+  "description": "My personal website. Heyjaywilson.com is going away at some point...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf _site",
+    "build:css": "postcss public/css/site.css -o _site/css/site.css --verbose",
+    "watch:css": "postcss public/css/site.css -o _site/css/site.css --watch --verbose",
+    "build": "npm run clean && npm run build:css && npx @11ty/eleventy",
+    "dev": "npm run clean && npm run build:css && (npm run watch:css & npx @11ty/eleventy --serve)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-bundle": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0"
+  }
+}

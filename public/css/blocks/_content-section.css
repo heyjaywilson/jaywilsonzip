@@ -1,0 +1,18 @@
+.content-section {
+  border: 5px solid var(--color-ultra-violet);
+  padding: var(--spacing-xl);
+  margin-top: 3rem;
+  position: relative;
+  background-color: var(--color-pale-azure);
+}
+
+.content-section h1,
+.content-section h2 {
+  position: absolute;
+  margin-top: -4rem; /* Pull the title up */
+}
+
+/* Add padding to the items in the section that are not the title */
+.content-section > *:not(h2) {
+  padding-top: var(--spacing-lg);
+}

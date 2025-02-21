@@ -1,0 +1,10 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}

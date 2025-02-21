@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+
+<header class="page-header slashpage__header">
+    <h1>{{ title }}</h1>
+    <p class="page-header__description">
+        {{ description }}
+    </p>
+</header>
+
+<div class="slashpage">
+    <div class="slashpage__content-container">
+        <div class="slashpage__content">
+            {{ content | safe }}
+        </div>
+    </div>
+
+    <div class="slashpage__footer">
+        <p class="slashpage__last-updated">Last updated: {{ lastUpdated | postDate }}</p>
+    </div>
+</div>

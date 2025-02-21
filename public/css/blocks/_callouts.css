@@ -1,0 +1,103 @@
+blockquote[data-callout] {
+  padding: 0.1rem var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  font-family: var(--font-mono);
+  border-radius: 0.5rem;
+  border-left-width: 1rem;
+}
+
+/* Remove the old ::before rules and add new icon styles */
+.callout-icon {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  margin-right: var(--spacing-sm);
+}
+
+/* Note variant */
+blockquote[data-callout="note"] {
+  border-left-color: var(--color-slate);
+  background-color: color-mix(in srgb, var(--color-slate) 5%, transparent);
+}
+
+blockquote[data-callout="note"] > p:first-of-type {
+  color: var(--color-slate);
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+blockquote[data-callout="note"] .callout-icon::before {
+  content: "\f328"; /* fa-circle-info */
+}
+
+/* Tip variant */
+blockquote[data-callout="tip"] {
+  border-left-color: var(--color-positive);
+  background-color: color-mix(in srgb, var(--color-positive) 5%, transparent);
+}
+
+blockquote[data-callout="tip"] > p:first-of-type {
+  color: var(--color-positive);
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+blockquote[data-callout="tip"] .callout-icon::before {
+  content: "\f0eb"; /* fa-lightbulb */
+}
+
+/* Important variant */
+blockquote[data-callout="important"] {
+  border-left-color: var(--color-ultra-violet);
+  background-color: color-mix(
+    in srgb,
+    var(--color-ultra-violet) 5%,
+    transparent
+  );
+}
+
+blockquote[data-callout="important"] > p:first-of-type {
+  color: var(--color-ultra-violet);
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+blockquote[data-callout="important"] .callout-icon::before {
+  content: "\f06a"; /* fa-circle-exclamation */
+}
+
+/* Warning variant */
+blockquote[data-callout="warning"] {
+  border-left-color: var(--color-negative);
+  background-color: color-mix(in srgb, var(--color-negative) 5%, transparent);
+}
+
+blockquote[data-callout="warning"] > p:first-of-type {
+  color: var(--color-negative);
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+blockquote[data-callout="warning"] .callout-icon::before {
+  content: "\f071"; /* fa-triangle-exclamation */
+}
+
+/* Caution variant */
+blockquote[data-callout="caution"] {
+  border-left-color: var(--color-warning);
+  background-color: color-mix(in srgb, var(--color-warning) 5%, transparent);
+}
+
+blockquote[data-callout="caution"] > p:first-of-type {
+  color: var(--color-warning);
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+blockquote[data-callout="caution"] .callout-icon::before {
+  content: "\f0e7"; /* fa-bolt */
+}

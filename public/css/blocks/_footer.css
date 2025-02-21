@@ -1,0 +1,13 @@
+footer {
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: calc(var(--spacing-xl) + var(--spacing-lg));
+}
+
+.footer--copyright {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}

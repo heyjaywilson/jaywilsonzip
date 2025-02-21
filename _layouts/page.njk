@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+    <h1>{{ title }}</h1>
+    <p class="page-header__description">
+        {{ description }}
+    </p>
+</header>
+
+<div class="page-content {% if title === 'About' %}page-content__about{% endif %}">
+    {{ content | safe }}
+</div>
