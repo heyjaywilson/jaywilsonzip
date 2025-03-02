@@ -23,7 +23,7 @@ Stack:
 
 Cost:
 - Analytics: $20/month
-- AWS: $0.00
+- AWS: Effectively $0.00
 - Netlify: $0.00
 - GitHub: $0.00
 
@@ -98,7 +98,14 @@ Sample table:
 | / | 2025-02-12 | 2025-02-12T16:04:49Z | 4 | 4 |
 | /posts/2025/02/21-0746-callout-support/ | 2025-02-22 | 2025-02-22T00:04:50Z | 6 | 6 |
 
+> ![NOTE]
+> This was a poor design choice on my part. The Date should actually be the partition key.
+
+When writing the analytics lambda and running it, I realized this actually isn't a good table design... I should have swaped the partition key and sort key so that I could query by date. To solve this, I added a GSI (Global Secondary Index) based on `date` so I didn't have to migrate *everything*. I might migrate to a proper table, but for now this will get the job done. I'll reconsider this decision once there's more cost.
+
 ### JSON File
+
+Here's an example of the JSON file.
 
 ```json
 {
