@@ -1,0 +1,272 @@
+{
+  "lastUpdated": "2025-03-03T04:59:44Z",
+  "popularPages": {
+    "thisMonth": [
+      {
+        "visitors": 3,
+        "url": "/",
+        "pageviews": 4,
+        "date": "2025-03-01T00:00:00Z"
+      }
+    ],
+    "thisWeek": [],
+    "rolling30Days": [
+      {
+        "pageviews": 7,
+        "visitors": 7,
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/readme/"
+      },
+      {
+        "date": "2025-02-24T00:00:00Z",
+        "url": "/posts/2025/02/23-2111/",
+        "pageviews": 4,
+        "visitors": 3
+      },
+      {
+        "url": "/now/",
+        "visitors": 6,
+        "pageviews": 7,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "date": "2025-02-12T00:00:00Z",
+        "visitors": 2,
+        "url": "/posts/2025/02/01-website-back/",
+        "pageviews": 2
+      },
+      {
+        "date": "2025-02-22T00:00:00Z",
+        "visitors": 8,
+        "url": "/posts/2025/02/21-0746-callout-support/",
+        "pageviews": 8
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/guy/",
+        "pageviews": 7,
+        "visitors": 6
+      },
+      {
+        "url": "/work/",
+        "pageviews": 3,
+        "visitors": 3,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "pageviews": 2,
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/posts/2024/09/09-weekend-away/",
+        "visitors": 2
+      },
+      {
+        "visitors": 3,
+        "date": "2025-02-19T00:00:00Z",
+        "pageviews": 4,
+        "url": "/about/"
+      },
+      {
+        "pageviews": 2,
+        "url": "/posts/2025/02/09t215300/",
+        "visitors": 2,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "url": "/contact/",
+        "date": "2025-02-19T00:00:00Z",
+        "visitors": 2,
+        "pageviews": 2
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "visitors": 20,
+        "pageviews": 23,
+        "url": "/"
+      },
+      {
+        "pageviews": 5,
+        "url": "/posts/",
+        "visitors": 5,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "url": "/uses/",
+        "pageviews": 15,
+        "visitors": 15,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "pageviews": 1,
+        "url": "/posts/2025/02/17-0956/",
+        "visitors": 1,
+        "date": "2025-02-18T00:00:00Z"
+      },
+      {
+        "url": "/subscribe/",
+        "date": "2025-02-22T00:00:00Z",
+        "pageviews": 1,
+        "visitors": 1
+      },
+      {
+        "visitors": 1,
+        "date": "2025-02-23T00:00:00Z",
+        "url": "/verify/",
+        "pageviews": 1
+      },
+      {
+        "visitors": 33,
+        "date": "2025-02-18T00:00:00Z",
+        "pageviews": 33,
+        "url": "/posts/2025/02/18-0622/"
+      }
+    ],
+    "rolling7Days": [
+      {
+        "pageviews": 9,
+        "visitors": 8,
+        "date": "2025-02-25T00:00:00Z",
+        "url": "/"
+      },
+      {
+        "visitors": 1,
+        "url": "/work/",
+        "pageviews": 1,
+        "date": "2025-02-27T00:00:00Z"
+      },
+      {
+        "url": "/posts/2025/02/23-2111/",
+        "date": "2025-02-25T00:00:00Z",
+        "pageviews": 3,
+        "visitors": 2
+      },
+      {
+        "url": "/posts/",
+        "date": "2025-02-26T00:00:00Z",
+        "visitors": 2,
+        "pageviews": 2
+      },
+      {
+        "pageviews": 3,
+        "date": "2025-02-26T00:00:00Z",
+        "url": "/posts/2025/02/18-0622/",
+        "visitors": 4
+      },
+      {
+        "url": "/about/",
+        "date": "2025-02-27T00:00:00Z",
+        "pageviews": 1,
+        "visitors": 1
+      }
+    ],
+    "allTime": [
+      {
+        "pageviews": 7,
+        "visitors": 7,
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/readme/"
+      },
+      {
+        "pageviews": 4,
+        "date": "2025-02-24T00:00:00Z",
+        "url": "/posts/2025/02/23-2111/",
+        "visitors": 3
+      },
+      {
+        "url": "/now/",
+        "visitors": 6,
+        "pageviews": 7,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "visitors": 2,
+        "url": "/posts/2025/02/01-website-back/",
+        "pageviews": 2,
+        "date": "2025-02-12T00:00:00Z"
+      },
+      {
+        "visitors": 8,
+        "url": "/posts/2025/02/21-0746-callout-support/",
+        "pageviews": 8,
+        "date": "2025-02-22T00:00:00Z"
+      },
+      {
+        "pageviews": 7,
+        "visitors": 6,
+        "url": "/guy/",
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "visitors": 3,
+        "url": "/work/",
+        "pageviews": 3
+      },
+      {
+        "pageviews": 2,
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/posts/2024/09/09-weekend-away/",
+        "visitors": 2
+      },
+      {
+        "url": "/about/",
+        "date": "2025-02-19T00:00:00Z",
+        "visitors": 3,
+        "pageviews": 4
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "url": "/posts/2025/02/09t215300/",
+        "pageviews": 2,
+        "visitors": 2
+      },
+      {
+        "pageviews": 2,
+        "url": "/contact/",
+        "visitors": 2,
+        "date": "2025-02-19T00:00:00Z"
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "visitors": 20,
+        "url": "/",
+        "pageviews": 23
+      },
+      {
+        "date": "2025-02-11T00:00:00Z",
+        "visitors": 5,
+        "pageviews": 5,
+        "url": "/posts/"
+      },
+      {
+        "url": "/uses/",
+        "visitors": 15,
+        "pageviews": 15,
+        "date": "2025-02-11T00:00:00Z"
+      },
+      {
+        "date": "2025-02-18T00:00:00Z",
+        "url": "/posts/2025/02/17-0956/",
+        "visitors": 1,
+        "pageviews": 1
+      },
+      {
+        "pageviews": 1,
+        "visitors": 1,
+        "url": "/subscribe/",
+        "date": "2025-02-22T00:00:00Z"
+      },
+      {
+        "date": "2025-02-23T00:00:00Z",
+        "pageviews": 1,
+        "url": "/verify/",
+        "visitors": 1
+      },
+      {
+        "visitors": 33,
+        "pageviews": 33,
+        "date": "2025-02-18T00:00:00Z",
+        "url": "/posts/2025/02/18-0622/"
+      }
+    ]
+  }
+}

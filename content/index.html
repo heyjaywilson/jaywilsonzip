@@ -6,7 +6,7 @@ description: Home page
 
 <section class="hero">
     <div class="hero__content">
-        <p>I like building, learning, and thinking out loud. Sometimes that means writing about code, sometimes it’s about life, and sometimes it’s just whatever I can’t stop thinking about.</p>
+        <p>I like building, learning, and thinking out loud. Sometimes that means writing about code, sometimes it's about life, and sometimes it's just whatever I can't stop thinking about.</p>
     </div>
 </section>
 <div class="home-page__container">
@@ -36,21 +36,25 @@ description: Home page
         </section>
     </div>
     <div class="home-page__right">
-        {# <section class="content-section">
+        <section class="content-section">
             <h2>Popular Posts</h2>
             <ul class="posts__list">
-                {%- for post in popularPosts -%}
-                    <li class="posts__list--item">
-                        <a href="{{ post.url }}" class="posts__list--item--title">
-                            <h3>{{ post.title }}</h3>
-                        </a>
-                        <span class="posts__list--item--date">posted on {{ post.date }}</span>
-                        <span class="posts__list--item--views">{{ post.views }} views and counting</span>
-                        <span class="posts__list--item--description">Here's a description of the post. It'll be not static later, but for now this is what I got.</span>
-                    </li>
+                {%- for post in (analytics | getPopularPosts(collections.posts)).slice(0,5) -%}
+                    {%- if post %}
+                        <li class="posts__list--item">
+                            <a href="{{ post.url }}" class="posts__list--item--title">
+                                <h3>{{ post.data.title }}</h3>
+                            </a>
+                            <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
+                            <span class="posts__list--item--views">{{ post.views }} views and counting</span>
+                            <span class="posts__list--item--description">{{ post.data.description }}</span>
+                        </li>
+                    {%- else -%}
+                        <li class="posts__list--item">No post data available.</li>
+                    {%- endif -%}
                 {%- endfor -%}
             </ul>
-        </section> #}
+        </section>
         <section class="content-section">
             <h2>Most Recent Posts</h2>
             <ul class="posts__list">
