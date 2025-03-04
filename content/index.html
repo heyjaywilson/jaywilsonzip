@@ -37,22 +37,31 @@ description: Home page
     </div>
     <div class="home-page__right">
         <section class="content-section">
-            <h2>Popular Posts</h2>
+            {% set result = analytics | getPopularPosts(collections.posts) %}
+            {% set posts = result.posts %}
+            {% set source = result.source %}
+            {% if source == "thisMonth" %}
+                <h2>This Month's Top Posts</h2>
+            {% elif source == "rolling30Days" %}
+                <h2>Last 30 Days' Top Posts</h2>
+            {% else %}
+                <h2>Top Posts</h2>
+            {% endif %}
             <ul class="posts__list">
-                {%- for post in (analytics | getPopularPosts(collections.posts)).slice(0,5) -%}
-                    {%- if post %}
+                {%- if posts | length > 0 -%}
+                    {%- for post in posts.slice(0, 5) -%}
                         <li class="posts__list--item">
                             <a href="{{ post.url }}" class="posts__list--item--title">
                                 <h3>{{ post.data.title }}</h3>
                             </a>
                             <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
-                            <span class="posts__list--item--views">{{ post.views }} views and counting</span>
+                            <span class="posts__list--item--views">{{ post.views }} views</span>
                             <span class="posts__list--item--description">{{ post.data.description }}</span>
                         </li>
-                    {%- else -%}
-                        <li class="posts__list--item">No post data available.</li>
-                    {%- endif -%}
-                {%- endfor -%}
+                    {%- endfor -%}
+                {%- else -%}
+                    <li class="posts__list--item">No popular posts available.</li>
+                {%- endif -%}
             </ul>
         </section>
         <section class="content-section">

@@ -122,33 +122,37 @@ export default function (eleventyConfig) {
     // Check if analytics and popularPages are defined
     if (!analytics || !analytics.popularPages) {
       console.error("Analytics data is not available or malformed:", analytics);
-      return []; // Return an empty array if analytics is not available
+      return { posts: [], source: "none" }; // Return an empty array if analytics is not available
     }
 
     console.log("Popular Pages:", analytics.popularPages); // Log popularPages
 
-    // Check if collections.posts is an array before mapping
-    console.log("Collections Posts:", posts); // Log the collections.posts
+    // Check if posts is an array before mapping
     const validPostUrls = Array.isArray(posts)
       ? posts.map((post) => post.url)
       : [];
-    console.log("Valid Post URLs:", validPostUrls); // Log valid post URLs
 
     // Filter thisMonth to only include valid posts from our collection
     const thisMonthPosts = (analytics.popularPages.thisMonth || []).filter(
       (page) => validPostUrls.includes(page.url)
     );
-    console.log("This Month Posts:", thisMonthPosts); // Log this month posts
 
     // Filter rolling30Days to only include valid posts from our collection
     const rolling30DaysPosts = (
       analytics.popularPages.rolling30Days || []
     ).filter((page) => validPostUrls.includes(page.url));
-    console.log("Rolling 30 Days Posts:", rolling30DaysPosts); // Log rolling 30 days posts
 
-    // Now check which array to use based on filtered posts
-    const popularPages =
-      thisMonthPosts.length > 0 ? thisMonthPosts : rolling30DaysPosts;
+    // Determine which array to use based on filtered posts
+    let popularPages = [];
+    let source = "none";
+
+    if (thisMonthPosts.length > 0) {
+      popularPages = thisMonthPosts;
+      source = "thisMonth";
+    } else if (rolling30DaysPosts.length > 0) {
+      popularPages = rolling30DaysPosts;
+      source = "rolling30Days";
+    }
 
     // Map to include post data
     const result = popularPages
@@ -158,9 +162,7 @@ export default function (eleventyConfig) {
       })
       .filter(Boolean); // Remove any null values
 
-    console.log("Resulting Popular Pages:", result); // Log the resulting popular pages
-
-    return result.sort((a, b) => b.views - a.views);
+    return { posts: result.sort((a, b) => b.views - a.views), source };
   });
 
   // Filter to get pageviews for a specific URL
