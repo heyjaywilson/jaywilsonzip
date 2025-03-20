@@ -1,32 +1,37 @@
 [
-    {
-        "name": "Instagram",
-        "url": "https://instagram.com/heyjaywilson",
-        "icon": "fa-brands fa-instagram"
-    },
-    {
-        "name": "Mastodon",
-        "url": "https://iosdev.space/@heyjaywilson",
-        "icon": "fa-brands fa-mastodon"
-    },
-    {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/@heyjaywilson",
-        "icon": "fa-brands fa-youtube"
-    },
-    {
-        "name": "Threads",
-        "url": "https://www.threads.net/@heyjaywilson",
-        "icon": "fa-brands fa-threads"
-    },
-    {
-        "name": "Bluesky",
-        "url": "https://bsky.app/profile/hey.jaywilson.zip",
-        "icon": "fa-brands fa-bluesky"
-    },
-    {
-        "name": "GitHub",
-        "url": "https://github.com/heyjaywilson",
-        "icon": "fa-brands fa-github"
-    }
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/heyjaywilson",
+    "icon": "fa-brands fa-instagram"
+  },
+  {
+    "name": "Mastodon",
+    "url": "https://iosdev.space/@heyjaywilson",
+    "icon": "fa-brands fa-mastodon"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/@heyjaywilson",
+    "icon": "fa-brands fa-youtube"
+  },
+  {
+    "name": "Threads",
+    "url": "https://www.threads.net/@heyjaywilson",
+    "icon": "fa-brands fa-threads"
+  },
+  {
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/hey.jaywilson.zip",
+    "icon": "fa-brands fa-bluesky"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/heyjaywilson",
+    "icon": "fa-brands fa-github"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/heyjaywilson",
+    "icon": "fa-brands fa-linkedin"
+  }
 ]

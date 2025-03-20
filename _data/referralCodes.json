@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Warp Terminal",
+    "link": "https://app.warp.dev/referral/34DYJV",
+    "description": "The terminal I use.",
+    "perk": "I might get some swag"
+  },
+  {
+    "name": "Coolors.co",
+    "link": "https://coolors.co/?ref=65972911c9fbc2000b4ce2bf",
+    "description": "Raycast is a productivity tool that I use.",
+    "perk": "I get $100"
+  },
+  {
+    "name": "YouNeedABudget",
+    "link": "https://ynab.com/referral/?ref=2xHjX8TBXec_BQfT",
+    "description": "You Need a Budget is an envelope budgeting mindset. I like the way it handles credit cards and loan payments",
+    "perk": "We each get 1 free month of use"
+  },
+  {
+    "name": "OMG.LOL",
+    "link": "https://home.omg.lol/referred-by/heyjay",
+    "description": "You don’t get anything for using this link or entering the code, but I do get 3 months of service free. If you need a nifty all in one service, consider using omg.lol.",
+    "perk": "I get 3 months of service free"
+  },
+  {
+    "name": "Digital Ocean",
+    "link": "https://lnk.heyjay.coffee/digital-ocean",
+    "description": "Digital Ocean is a cloud provider that I use for hosting assets and for some of my projects.",
+    "perk": "You get $200 credit to use over 60 days"
+  },
+  {
+    "name": "Point Free Co",
+    "link": "https://geni.us/PointFree",
+    "description": "Point Free creates The Composable Architecture and puts out some really good videos about concepts inside Swift and SwiftUI.",
+    "perk": "I no longer have a piad account so there's no perk for you or me, but you should still consider their videos"
+  }
+]

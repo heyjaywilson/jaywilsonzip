@@ -1,38 +1,38 @@
 [
-    {
-      "url": "/now",
-      "title": "now"
-    },
-    {
-      "url": "/uses",
-      "title": "uses"
-    },
-    {
-      "url": "/readme",
-      "title": "readme"
-    },
-    {
-      "url": "/guy",
-      "title": "guy"
-    },
-    {
-      "url": "/follow",
-      "title": "follow"
-    },
-    {
-      "url": "/contact",
-      "title": "contact"
-    },
-    {
-      "url": "/buy-me-coffee",
-      "title": "buy-me-coffee"
-    },
-    {
-      "url": "/save",
-      "title": "save"
-    },
-    {
-      "url": "/verify",
-      "title": "verify"
-    }
-  ]
+  {
+    "url": "/now",
+    "title": "now"
+  },
+  {
+    "url": "/uses",
+    "title": "uses"
+  },
+  {
+    "url": "/readme",
+    "title": "readme"
+  },
+  {
+    "url": "/guy",
+    "title": "guy"
+  },
+  {
+    "url": "/follow",
+    "title": "follow"
+  },
+  {
+    "url": "/contact",
+    "title": "contact"
+  },
+  {
+    "url": "/coffee",
+    "title": "buy-me-coffee"
+  },
+  {
+    "url": "/save",
+    "title": "save"
+  },
+  {
+    "url": "/verify",
+    "title": "verify"
+  }
+]

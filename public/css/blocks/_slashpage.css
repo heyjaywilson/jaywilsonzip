@@ -29,6 +29,10 @@
   margin-top: var(--spacing-lg);
 }
 
+.slashpage__content h2 a {
+  color: var(--color-black-dark);
+}
+
 .slashpage__content h3 {
   margin-top: var(--spacing-md);
 }

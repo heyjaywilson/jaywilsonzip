@@ -13,3 +13,15 @@ Here are some affiliate links to save you some money for services and goods that
 - Digital Ocean
 - Notion
 - Point Free Co
+- [Coolors.co](https://coolors.co/?ref=65972911c9fbc2000b4ce2bf) for generating color palettes like the one on this site
+
+{% for code in referralCodes %}
+## [{{ code.name }}]({{ code.link }})
+
+{{ code.description }}
+
+**If you use this link what happens?**
+
+{{ code.perk }}
+
+{% endfor %}
