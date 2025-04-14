@@ -12,6 +12,14 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/**/*.{jpg,jpeg,png,gif}");
 
   eleventyConfig.addWatchTarget("./public/css/**/*.css");
+  
+  // Preprocessors
+  // Drafts
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
 
   // PLUGINS
   // Syntax
