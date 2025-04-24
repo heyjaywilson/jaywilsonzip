@@ -41,7 +41,8 @@ More apps to be decided later... I need to finish the app first.
 - Started to implement [Fluent](https://github.com/vapor/fluent) then completely over thought what an "in memory" database meant so pivoted to [PostgresNIO](https://github.com/vapor/postgres-nio) to follow the tutorial/guides more on Hummingbird's website
 - Added a `docker-compose` file to run the server and database at the same time and was able to see my table in [TablePlus](https://tableplus.com/), the app I use to inspect databases.
 
->![NOTE]
+> [!NOTE]
+>
 > TablePlus is part of SetApp, which I've found worth the subscription. You can get [SetApp here](https://lnk.heyjay.coffee/setapp) and if you sign up we both get a month free.
 
 ## What's next?

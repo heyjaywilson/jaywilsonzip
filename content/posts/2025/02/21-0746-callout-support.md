@@ -12,7 +12,7 @@ With the help of Cursor, I think I've added support for callouts similar to [Git
 Here are examples of how mine render:
 
 > [!NOTE]
-> That has a broken line in it
+> That has one line in it.
 
 > [!TIP]
 > This is a tip
