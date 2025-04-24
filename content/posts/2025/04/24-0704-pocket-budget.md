@@ -48,7 +48,7 @@ More apps to be decided later... I need to finish the app first.
 ## What's next?
 
 When: April 27 2024 at 2pm PST
-Where: [YouTube] or [Twitch](https://lnk.heyjay.coffee/twitch) 
+Where: [YouTube](https://youtube.com/live/IBWIWOzYGFQ?feature=share) or [Twitch](https://lnk.heyjay.coffee/twitch) 
 
 Goals:
 
