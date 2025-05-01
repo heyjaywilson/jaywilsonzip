@@ -2,6 +2,14 @@
 title: "PocketBudget Stream #2 Recap"
 description: I wanted to complete 4 tasks this stream, but I eneded up only doing 2 since I didn't account for any troubleshooting time.
 date: 2025-04-27
+categories:
+  - swift
+  - devlog
+  - pocketbudget
+  - hummingbird
+  - postgresnio
+  - postgres
+  - serversideswift
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IBWIWOzYGFQ?si=EUI52IhtaJ0sSUDD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

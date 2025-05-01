@@ -3,6 +3,9 @@ title: Trans Day of Visibility 2025
 date: 2025-03-31
 views: 0
 description: A small reflection on Transgender Day of Visibility
+categories:
+  - gender
+  - journal
 ---
 
 I don’t talk about this too much here, and I think today is a good day to do it. I’m Jay and I’m a trans man. My pronouns are he/him. I started posting on socials, streaming, and making YouTube content as a way to represent people I didn’t see a lot of in tech and I am going to continue that.

@@ -2,6 +2,9 @@
 title: "Things I didn't think HRT would change #1"
 description: Random post about HRT changing my foot-size
 date: 2025-04-08
+categories:
+  - gender
+  - journal
 ---
 
 I started HRT to medically transition in August of 2023. Since then I had the expected changes, small weight distribution and voice change mainly. I had heard that testosterone could change a person's foot-size but being that I was 29 when I started and fully grown, I didn't think it would happen to me. I was wrong. Today, I received an order for a new pair of shoes I already owned but 1/2 a size bigger.

@@ -1,6 +1,7 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { calloutsPlugin } from "./_plugins/callouts.js";
+import { IdAttributePlugin } from "@11ty/eleventy";
 
 // Configuration file for website
 export default function (eleventyConfig) {
@@ -12,11 +13,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/**/*.{jpg,jpeg,png,gif}");
 
   eleventyConfig.addWatchTarget("./public/css/**/*.css");
-  
+
   // Preprocessors
   // Drafts
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-    if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
       return false;
     }
   });
@@ -24,6 +25,8 @@ export default function (eleventyConfig) {
   // PLUGINS
   // Syntax
   eleventyConfig.addPlugin(syntaxHighlight);
+  // ID Attribute
+  eleventyConfig.addPlugin(IdAttributePlugin);
   // RSS FEED
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",

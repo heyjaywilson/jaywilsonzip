@@ -28,3 +28,4 @@ Last updated: April 24, 2025
 ## What I find AI really good at
 
 - Docker files. I am clueless about Docker files, but it's really good at helping me figure out what I need to change and what I need to do to get it working.
+- Scripts. I'm pretty new to making scripts or doing anything with the command line. Since most of that has been written about, AI is actually really good at writing scripts that need to do a specific task.

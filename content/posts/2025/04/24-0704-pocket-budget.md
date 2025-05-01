@@ -2,6 +2,14 @@
 title: PocketBudget Stream Recap
 description: PocketBudget app has been started. Here's a recap of the first stream.
 date: 2025-04-24
+categories:
+  - swift
+  - devlog
+  - pocketbudget
+  - hummingbird
+  - postgresnio
+  - postgres
+  - serversideswift
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sfkcgzpVoNE?si=SEsF7gJ9sMMG2Hr9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
