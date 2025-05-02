@@ -6,7 +6,7 @@ description: Home page
 
 <section class="hero">
     <div class="hero__content">
-        <p>I like building, learning, and thinking out loud. Sometimes that means writing about code, sometimes it’s about life, and sometimes it’s just whatever I can’t stop thinking about.</p>
+        <p>I like building, learning, and thinking out loud. Sometimes that means writing about code, sometimes it's about life, and sometimes it's just whatever I can't stop thinking about.</p>
     </div>
 </section>
 <div class="home-page__container">
@@ -54,12 +54,19 @@ description: Home page
         <section class="content-section">
             <h2>Most Recent Posts</h2>
             <ul class="posts__list">
-                {%- for post in (collections.posts | reverse).slice(0,5) -%}
+                {%- for post in (collections.posts | reverse).slice(0,10) -%}
                     <li class="posts__list--item">
-                        <a href="{{ post.url }}" class="posts__list--item--title">
-                            <h3>{{ post.data.title }}</h3>
+                        <a href="{{ post.url }}" class="posts__list--item--link">
+                            <h3 class="posts__list--item--title">{{ post.data.title }}</h3>
                             <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
                             <span class="posts__list--item--description">{{ post.data.description }}</span>
+                            <ul class="posts__list--item--categories">
+                                {%- for category in post.data.categories -%}
+                                    <li class="posts__list--item--category">
+                                        <i class="fa-sharp fa-light fa-tag"></i>
+                                        {{ category }}</li>
+                                {%- endfor -%}
+                            </ul>
                         </a>
                     </li>
                 {%- endfor -%}

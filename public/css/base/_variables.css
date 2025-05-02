@@ -40,4 +40,5 @@
   /* Layout */
   --container-max: 75rem;
   --content-max: 50rem;
+  --content-max-wide: 90rem;
 }

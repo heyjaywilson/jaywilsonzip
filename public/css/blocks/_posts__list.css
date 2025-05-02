@@ -45,16 +45,41 @@
     1rem 1rem 0 var(--color-ultra-violet), 1.5rem 1.5rem 0 var(--color-cyclamen);
 }
 
-.posts__list--item--title {
+.posts__list--item--link {
   text-decoration: none;
+  color: inherit;
 }
 
-.posts__list--item--title h3 {
+.posts__list--item--title {
   font-family: var(--font-mono);
   font-size: 1.65rem;
   font-weight: 600;
   color: var(--color-black);
   margin-bottom: var(--spacing-xs);
+}
+
+.posts__list--item--date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-ultra-violet);
+}
+
+.posts__list--item--description {
+  display: block;
+  color: var(--color-black);
+  border-top: 2px solid var(--color-ultra-violet);
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+}
+
+.posts__list--item--categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
 .posts__list--item--date,
@@ -66,33 +91,31 @@
   margin-bottom: var(--spacing-xs);
 }
 
-.posts__list--item--description {
-  display: block;
-  color: var(--color-black);
-  margin-top: var(--spacing-sm);
-  border-top: 2px solid var(--color-ultra-violet);
-  padding-top: var(--spacing-sm);
+.posts__list--item--category {
+  background-color: var(--color-ultra-violet);
+  color: var(--color-black-dark);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--spacing-xs);
 }
 
-/* Most Recent Posts styles */
-.posts__item {
-  padding: var(--spacing-sm) 0;
-  border-bottom: 2px solid var(--color-ultra-violet);
-}
+@media (min-width: 64rem) {
+  .posts__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
 
-.post-item__title {
-  text-decoration: none;
-}
+  .posts__list--item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-.post-item__title h3 {
-  font-family: var(--font-mono);
-  font-size: 1.125rem;
-  color: var(--color-black);
-  margin-bottom: var(--spacing-xs);
-}
+  .posts__list--item--description {
+    flex: 1;
+  }
 
-.post-item__date {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--color-ultra-violet);
+  .posts__list--item--categories {
+    margin-top: auto;
+  }
 }

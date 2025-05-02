@@ -8,3 +8,9 @@
   max-width: var(--container-max);
   margin: 0 auto;
 }
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 120rem;
+  }
+}

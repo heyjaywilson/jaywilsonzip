@@ -1,9 +1,31 @@
 .home-page__container {
-  margin: 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0rem;
+  gap: var(--spacing-xl);
   width: 100%;
-  max-width: var(--content-max);
-  margin: 0 auto;
+  max-width: var(--container-max);
+  padding: 0 var(--spacing-md);
+}
+
+/* Two column layout for larger screens */
+@media (min-width: 64rem) {
+  .home-page__container {
+    max-width: 120rem;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-xxl);
+  }
+}
+
+.home-page__left,
+.home-page__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Ensure content sections stack properly */
+.home-page__left .content-section,
+.home-page__right .content-section {
+  width: 100%;
 }

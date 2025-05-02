@@ -7,3 +7,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width: 64rem) {
+  main:has(.home-page__container) {
+    max-width: var(--content-max-wide);
+  }
+}

@@ -7,11 +7,17 @@ description: My writings, photos, and videos about anything and everything.
     <ul class="posts-page__list">
         {%- for post in collections.posts | reverse -%}
             <li class="posts__list--item">
-                <a href="{{ post.url }}" class="posts__list--item--title">
-                    <h3>{{ post.data.title }}</h3>
+                <a href="{{ post.url }}" class="posts__list--item--link">
+                    <h3 class="posts__list--item--title">{{ post.data.title }}</h3>
                     <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
                     <span class="posts__list--item--description">{{ post.data.description }}</span>
-
+                    <ul class="posts__list--item--categories">
+                        {%- for category in post.data.categories -%}
+                            <li class="posts__list--item--category">
+                                <i class="fa-sharp fa-light fa-tag"></i>
+                                {{ category }}</li>
+                        {%- endfor -%}
+                    </ul>
                 </a>
             </li>
         {%- endfor -%}
