@@ -7,7 +7,6 @@ categories:
   - swift
   - hummingbird
   - swift-server
-  - swift-on-server
 ---
 
 [Hummingbird](https://github.com/hummingbird-project/hummingbird?tab=readme-ov-file) is a server framework written in Swift. I'm using it at work and for a few personal projects. It's small and quick to build, so it checks the boxes for what I'm trying to do.

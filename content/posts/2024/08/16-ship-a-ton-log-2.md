@@ -9,8 +9,7 @@ categories:
   - findrelief
   - swiftui
   - dynamodb
-  - swiftserver
-  - swiftonserver
+  - swift-server
   - ship-a-ton
 ---
 

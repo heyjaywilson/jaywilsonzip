@@ -55,3 +55,35 @@
     font-size: 1rem;
   }
 }
+
+.page__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  width: 100%;
+  max-width: var(--container-max);
+  padding: 0 var(--spacing-md);
+}
+
+.page__left,
+.page__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Ensure content sections stack properly */
+.page__left,
+.page__right {
+  width: 100%;
+}
+
+/* Two column layout for larger screens */
+@media (min-width: 64rem) {
+  .page__container {
+    max-width: 120rem;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-xxl);
+  }
+}

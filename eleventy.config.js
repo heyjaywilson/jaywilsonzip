@@ -112,6 +112,56 @@ export default function (eleventyConfig) {
     });
   });
 
+  // Get all unique categories from the posts
+  eleventyConfig.addFilter("getCategories", function (posts) {
+    const categories = new Map();
+
+    posts.forEach((post) => {
+      if (post.data.categories) {
+        post.data.categories.forEach((category) => {
+          categories.set(category, (categories.get(category) || 0) + 1);
+        });
+      }
+    });
+
+    // Convert to array of objects with category name and count
+    return Array.from(categories.entries())
+      .map(([category, count]) => ({
+        name: category,
+        count: count,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  });
+
+  eleventyConfig.addFilter("filterByCategory", function (posts, category) {
+    return posts.filter((post) => {
+      return post.data.categories && post.data.categories.includes(category);
+    });
+  });
+
+  // Create a collection for each unique category defined in the postss
+  eleventyConfig.addCollection("categoryPages", function (collectionApi) {
+    const categories = new Set();
+    const posts = collectionApi.getFilteredByTag("posts");
+
+    posts.forEach((post) => {
+      if (post.data.categories) {
+        post.data.categories.forEach((category) => categories.add(category));
+      }
+    });
+
+    return Array.from(categories).map((category) => ({
+      category: category,
+      slug: category.toLowerCase().replace(/\s+/g, "-"),
+      posts: posts
+        .filter(
+          (post) =>
+            post.data.categories && post.data.categories.includes(category)
+        )
+        .sort((a, b) => b.date - a.date),
+    }));
+  });
+
   // Return the config object
   return {
     templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],

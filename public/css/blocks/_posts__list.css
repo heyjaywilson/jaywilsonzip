@@ -80,6 +80,8 @@
   padding-top: var(--spacing-sm);
   font-size: 0.8rem;
   opacity: 0.7;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .posts__list--item--date,
@@ -96,6 +98,11 @@
   color: var(--color-black-dark);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--spacing-xs);
+}
+
+.posts__list--item--category > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (min-width: 64rem) {

@@ -4,8 +4,8 @@ title: Posts
 description: My writings, photos, and videos about anything and everything.
 ---
 <section class="posts-page__content-section">
-    <ul class="posts-page__list">
-        {%- for post in collections.posts | reverse -%}
+    <ul class="posts__list">
+        {%- for post in (collections.posts | reverse).slice(0,10) -%}
             <li class="posts__list--item">
                 <a href="{{ post.url }}" class="posts__list--item--link">
                     <h3 class="posts__list--item--title">{{ post.data.title }}</h3>

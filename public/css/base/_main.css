@@ -12,4 +12,7 @@ main {
   main:has(.home-page__container) {
     max-width: var(--content-max-wide);
   }
+  main:has(.page__container) {
+    max-width: var(--content-max-wide);
+  }
 }

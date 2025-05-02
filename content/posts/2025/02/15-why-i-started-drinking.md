@@ -4,7 +4,6 @@ date: 2025-02-15
 description: A look back at why I started drinking Old Fashioneds
 categories:
   - cocktails
-  - old fashioneds
   - gender
   - journal
 ---

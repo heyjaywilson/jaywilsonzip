@@ -1,0 +1,26 @@
+---
+layout: page.njk
+pagination:
+  data: collections.categoryPages
+  size: 1
+  alias: categoryData
+  addAllPagesToCollections: true
+permalink: /posts/tags/{{ categoryData.category | slugify }}/
+eleventyComputed:
+  title: "#{{ categoryData.category }}"
+  description: "All posts tagged with {{ categoryData.category }}"
+---
+
+<section class="posts-page__content-section">
+    <ul class="posts-page__list">
+        {%- for post in categoryData.posts -%}
+            <li class="posts__list--item">
+                <a href="{{ post.url }}" class="posts__list--item--link">
+                    <h3 class="posts__list--item--title">{{ post.data.title }}</h3>
+                    <span class="posts__list--item--date">posted on {{ post.date | postDate }}</span>
+                    <span class="posts__list--item--description">{{ post.data.description }}</span>
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</section>
