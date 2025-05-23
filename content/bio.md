@@ -16,7 +16,7 @@ lastUpdated: 2025-05-23
 - [Studio Display](https://amzn.to/3ZrO6Dt)
 - [LG Dual Up](https://amzn.to/43yKpxi)
 - MacBook Pro M1 Max ([Link](https://amzn.to/4ds61jc)) to most current model)
-- Keyboard: [Zoom 75 by Meletrix]((https://meletrix.com/collections/zoom75-collection)
+- Keyboard: [Zoom 75 by Meletrix](https://meletrix.com/collections/zoom75-collection)
 
 ## Tools I use Daily
 
