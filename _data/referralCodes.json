@@ -1,5 +1,10 @@
 [
   {
+    "name": "Setapp",
+    "link": "https://setapp.sjv.io/MAogQq",
+    "description": "Setapp is a subscription service that provides access to a wide range of productivity tools."
+  },
+  {
     "name": "Warp Terminal",
     "link": "https://app.warp.dev/referral/34DYJV",
     "description": "The terminal I use.",
@@ -34,5 +39,20 @@
     "link": "https://geni.us/PointFree",
     "description": "Point Free creates The Composable Architecture and puts out some really good videos about concepts inside Swift and SwiftUI.",
     "perk": "I no longer have a piad account so there's no perk for you or me, but you should still consider their videos"
+  },
+  {
+    "name": "Notion",
+    "link": "https://affiliate.notion.so/jaywilsonzip",
+    "description": "Notion is a productivity tool that I use."
+  },
+  {
+    "name": "Flavnt Streetwear",
+    "link": "https://flavnt.com?bg_ref=GL2rkLOBKq",
+    "description": "A brand by queer people, for queer people. I love their mission and their clothing is really comfortable. They also like to give back to the LGBTQ+ community when they can."
+  },
+  {
+    "name": "Hover",
+    "link": "https://hover-affiliates.pxf.io/Oeoz1W",
+    "description": "The domain registration service that I use."
   }
 ]
