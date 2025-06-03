@@ -5,7 +5,11 @@ description: What am I using in my life?
 lastUpdated: 2025-02-16
 ---
 
-`Note: Some of these are affiliate links, so if you click one of the links and make a purchase, I might get a little kickback. That doesn't play a factor into whether I use something or not though.`
+
+> [!NOTE]
+>
+> Some of these are affiliate links, so if you click one of the links and make a purchase, I might get a little kickback.
+
 
 ## Desk
 
@@ -19,12 +23,13 @@ The desk is made of 2 components. The table top is not made anymore but it's sol
 
 I'm including my phone and iPads here as well
 
-- [MacBook Pro 14" M1 Max](https://geni.us/mBcWAX)
+- [MacBook Pro 14" M1 Max](https://amzn.to/4mLvmJo)
 - [iPhone 16 Pro](https://www.apple.com/shop/buy-iphone/iphone-16-pro)
 - [iPad Mini](https://geni.us/dU1Eh)
 - [iPad Pro 13"](https://amzn.to/4k2p8mS)
 
 ### Accessories
+- [Studio Display](https://geni.us/1cS4oG)
 - [LG Dual Up](https://geni.us/9AGPlgP)
 - Elgato thunderbolt dock (I can't find a link for this at all anymore)
 - [Magic Trackpad](https://geni.us/oRMxMF)
@@ -43,9 +48,19 @@ What's listed here is not necessary for zoom calls, but it's what I use for stre
 - [Sony ZV-E10 1st Gen](https://amzn.to/3QpTi6e) as a webcam
 - [Tamron 17 - 28mm lens](https://amzn.to/3ESAaLk) this is a full frame lens because I have other Sony Cameras that are full frame
 
+### Photography and Video Equipment
+
+- [Sony ZVE-1](https://amzn.to/3HFtmC8) as my main camera for [reels](https://instagram.com/heyjaywilson) and [videos](https://youtube.com/heyjaywilson)
+- [Sony ECM-M1](https://amzn.to/4kNNBfi) is the microphone usually on the ZVE-1
+- [DJI Mic 2](https://amzn.to/3HFuoy0) is the other microphone I use when I need to be further away from the camera
+- [FUJIFILM X100VI](https://www.bhphotovideo.com/c/product/1811352-REG/fujifilm_16821822_x100vi_digital_camera_silver.html) as my main photo camera
+
 ## Default apps
 
-`Note: App_Name.app means it's an Apple app. IE Reminders.app means it's the stock iOS Reminders app.`
+> [!NOTE]
+>
+> App_Name.app means it's an Apple app. IE Reminders.app means it's the stock iOS Reminders app.
+
 
 - 📨 Mail Client: Mail.app and Gmail app on iOS and Gmail or <a class="affiliateLink" href="https://geni.us/cctfastmail">Fastmail</a> web pages on desktop
 - 📮 Mail Server: <a href="https://www.google.com/gmail/about/">Google</a> and <a class="affiliateLink" href="https://geni.us/cctfastmail">Fastmail</a>
