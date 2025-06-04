@@ -1,6 +1,6 @@
 ---
 title: "I love flying"
-description: I love flying.
+description: "Flying is always fun for me..."
 date: 2025-05-10
 categories:
   - journal
