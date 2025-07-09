@@ -1,6 +1,6 @@
 ---
 title: "PocketBudget Update"
-description: "Somewhat daily progress update for the PocketBudget app."
+description: "A progresss update for the PocketBudget app."
 date: 2025-07-09
 categories: ["shipaton", "swift", "pocketbudget"]
 ---
@@ -11,5 +11,7 @@ The last time I [streamed](https://www.youtube.com/live/0V_2YeVDv9c?si=NCpPrdAq5
 
 Started building out the new transaction flow, which is what I'll continue on stream tonight. Make sure to drop by and say hi either on Twitch or YouTube.
 
-Twitch: https://www.twitch.tv/heyjaywilson
-YouTube: https://www.youtube.com/@heyjaycodes
+- Twitch: [https://www.twitch.tv/heyjaywilson](https://www.twitch.tv/heyjaywilson)
+- YouTube: [https://www.youtube.com/@heyjaycodes](https://www.youtube.com/@heyjaycodes)
+
+My goal is to get the iOS app shipped by the end of the month, so I can enter [shipaton](https://shipaton.com) and then continue building out the backend.
