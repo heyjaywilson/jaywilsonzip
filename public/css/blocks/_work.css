@@ -1,56 +1,64 @@
 .work__list {
-  /* list-style: none; */
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
 .work__item {
-  border: 3px solid var(--color-ultra-violet);
-  padding: var(--spacing-lg);
-  background-color: var(--color-black-dark);
-  transition: all 0.2s;
+    border: 3px solid var(--color-ultra-violet);
+    padding: var(--spacing-lg);
+    background-color: var(--color-black-dark);
+    transition: all 0.2s;
 }
 
 .work__item h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .work__item:hover {
-  transform: translate(-0.5rem, -0.5rem);
-  box-shadow: 0.5rem 0.5rem 0 var(--color-saffron),
-    1rem 1rem 0 var(--color-ultra-violet), 1.5rem 1.5rem 0 var(--color-cyclamen),
-    2rem 2rem 0 var(--color-pale-azure);
+    transform: translate(-0.5rem, -0.5rem);
+    box-shadow:
+        0.5rem 0.5rem 0 var(--color-saffron),
+        1rem 1rem 0 var(--color-ultra-violet),
+        1.5rem 1.5rem 0 var(--color-cyclamen),
+        2rem 2rem 0 var(--color-pale-azure);
 }
 
 .work__item-company {
-  font-size: 1.5rem;
-  color: var(--color-black);
+    font-size: 1.5rem;
+    color: var(--color-black);
 }
 
 .work__item-date {
-  font-size: 1rem;
-  font-weight: 400;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .work__item-slogan {
-  font-size: 0.8rem;
-  font-weight: 300;
+    font-size: 0.8rem;
+    font-weight: 300;
 }
 
 .work__item-achievements-label {
-  padding-top: 1rem;
+    padding-top: 1rem;
 }
 
 .work__item-responsibilities-label {
-  padding-top: 1rem;
+    padding-top: 1rem;
 }
 
 .work__item-responsibilities-list,
 .work__item-achievements-list {
-  padding-top: 0.5rem;
-  padding-left: 1.5rem;
-  list-style-type: disc;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+.work__item-tools-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
 }

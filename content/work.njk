@@ -6,7 +6,7 @@ description: My work experience.
 
 <section class="work-container">
     <ul class="work__list">
-        {%- for work in collections.work -%}
+        {%- for work in collections.work | reverse -%}
             <li class="work__item">
                 <div class="work-details">
                     <h2 class="work__item-role">{{ work.data.role }}</h2>
@@ -14,7 +14,7 @@ description: My work experience.
                     {# <p class="work__item-slogan">"{{ work.data.slogan }}"</p> #}
                     <time class="work__item-date">
                         {{ work.data.startDate | monthName }}
-                        {{ work.data.startDate | year }} - 
+                        {{ work.data.startDate | year }} -
                         {% if work.data.endDate %}
                             {{ work.data.endDate | monthName }}
                             {{ work.data.endDate | year }}
@@ -40,6 +40,17 @@ description: My work experience.
                             <ul class="work__item-responsibilities-list">
                                 {%- for task in work.data.responsibilities -%}
                                     <li class="work__item-responsibility">{{ task }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    {% if work.data.tools %}
+                        <div class="work__item-responsibilities">
+                            <h3 class="work__item-responsibilities-label">🛠️ Tools</h3>
+                            <ul class="work__item-tools-list">
+                                {%- for tool in work.data.tools -%}
+                                    <li class="work__item-tool">{{ tool }}</li>
                                 {%- endfor -%}
                             </ul>
                         </div>
