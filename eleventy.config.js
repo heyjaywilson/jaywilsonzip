@@ -89,17 +89,17 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("workDate", function (dateObj) {
-    let dateString = dateObj.toLocaleDateString();
+    let dateString = dateObj.toLocaleDateString("en-US", { timeZone: "UTC" });
     return "Working on it " + dateString;
   });
 
   eleventyConfig.addFilter("monthName", function (dateObj) {
-    let dateString = dateObj.toLocaleString("default", { month: "long" });
+    let dateString = dateObj.toLocaleString("default", { month: "long", timeZone: "UTC" });
     return dateString;
   });
 
   eleventyConfig.addFilter("year", function (dateObj) {
-    return dateObj.getFullYear();
+    return dateObj.getUTCFullYear();
   });
 
   // Filter for converting date to something that looks good on the post
@@ -109,6 +109,7 @@ export default function (eleventyConfig) {
       year: "numeric",
       month: "short",
       day: "numeric",
+      timeZone: "UTC"
     });
   });
 
