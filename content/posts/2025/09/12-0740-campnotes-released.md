@@ -1,7 +1,7 @@
 ---
 title: "Camp Notes v1.0.0 is now shipping"
 description: "Camp Notes was approved last week and has been in the App Store for about a week."
-date: 2025-09-03
+date: 2025-09-12
 categories: ["shipaton", "swift", "campnotes"]
 ---
 
