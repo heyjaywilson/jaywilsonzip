@@ -1,4 +1,5 @@
 ---
+posted: true
 title: What I take with me on a weekend away
 date: 2024-09-09
 views: 0

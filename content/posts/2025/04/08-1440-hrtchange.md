@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "Things I didn't think HRT would change #1"
 description: Random post about HRT changing my foot-size
 date: 2025-04-08

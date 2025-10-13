@@ -1,4 +1,5 @@
 ---
+posted: true
 title: PocketBudget Stream Recap
 description: PocketBudget app has been started. Here's a recap of the first stream.
 date: 2025-04-24

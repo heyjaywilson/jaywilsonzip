@@ -1,4 +1,5 @@
 ---
+posted: true
 title: Callout support
 description: I added support for callouts to my blog.
 date: 2025-02-21

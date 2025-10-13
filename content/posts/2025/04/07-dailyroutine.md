@@ -1,4 +1,5 @@
 ---
+posted: true
 date: 2025-04-07
 title: Writing down my 3 tasks
 description: I started doing this recently, and I really like it.

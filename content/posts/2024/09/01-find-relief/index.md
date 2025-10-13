@@ -1,4 +1,5 @@
 ---
+posted: true
 title: FindRelief - Project Log 3
 description: Update number 3 on FindRelief.
 type: article

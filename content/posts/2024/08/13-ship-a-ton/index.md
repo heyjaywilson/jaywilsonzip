@@ -1,4 +1,5 @@
 ---
+posted: true
 title: FindRelief - Project Log 1
 description: I started a new project. A restroom finder.
 date: 2024-08-14

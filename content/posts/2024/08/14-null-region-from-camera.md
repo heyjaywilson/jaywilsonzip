@@ -1,4 +1,5 @@
 ---
+posted: true
 title: How to get the current MKCoordinateRegion from a MapCameraPosition
 description: Struggled with this a bit, so figured I would write how I did this.
 date: 2024-08-15

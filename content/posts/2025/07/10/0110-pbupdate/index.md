@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "PocketBudget Update: July 10, 2025"
 description: "What happened on stream."
 date: 2025-07-09T00:01:00Z

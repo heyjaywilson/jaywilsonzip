@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "How to see path of file in \"Alex: AI for Xcode\""
 description: "Hover over the file and the path will appear."
 date: 2025-06-04

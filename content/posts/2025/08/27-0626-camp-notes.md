@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "I finally submitted a side project"
 description: "I'm not the best at finishing side projects, and this one isn't finished but it's going to the App Store."
 date: 2025-08-27T06:41:00Z

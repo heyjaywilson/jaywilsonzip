@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "PocketBudget Stream #3: Swift Testing and Foreign Keys"
 description: Not only is this a recap, but you'll find tidbits around PostgreSQL and Swift Testing.
 date: 2025-05-01

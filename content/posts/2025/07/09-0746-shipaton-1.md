@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "PocketBudget Update"
 description: "A progresss update for the PocketBudget app."
 date: 2025-07-09

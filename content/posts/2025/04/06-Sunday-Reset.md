@@ -1,4 +1,5 @@
 ---
+posted: true
 date: 2025-04-06
 title: Sunday Reset
 description: Cleaning off the desk to get ready for the work week

@@ -1,4 +1,5 @@
 ---
+posted: true
 title: How I am using AI Assisted Coding
 description: Just a list of some do's and don'ts I'm learning.
 date: 2025-04-18

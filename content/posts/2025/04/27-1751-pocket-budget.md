@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "PocketBudget Stream #2 Recap"
 description: I wanted to complete 4 tasks this stream, but I eneded up only doing 2 since I didn't account for any troubleshooting time.
 date: 2025-04-27

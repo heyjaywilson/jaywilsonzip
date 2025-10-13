@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "Waiting for Review: A Camp Notes Update"
 description: "Camp Notes is still in review and here's why."
 date: 2025-09-03

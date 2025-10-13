@@ -1,4 +1,5 @@
 ---
+posted: true
 title: "How to access custom headers in Hummingbird 2"
 description: A quick example of how to access custom headers in the Swift Server platform Hummingbird.
 date: 2024-07-08

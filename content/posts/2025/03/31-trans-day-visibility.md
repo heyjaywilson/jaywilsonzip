@@ -1,4 +1,5 @@
 ---
+posted: true
 title: Trans Day of Visibility 2025
 date: 2025-03-31
 views: 0
