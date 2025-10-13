@@ -1,0 +1,43 @@
+name: Check for Scheduled Posts
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC to check for new posts to publish
+    - cron: "0 9 * * *"
+  workflow_dispatch: # Allow manual triggering
+  push:
+    branches:
+      - main
+
+jobs:
+  check-scheduled-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish scheduled posts
+        id: publish-posts
+        run: node publish-posts.js
+
+      - name: Commit and push changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git commit -m "🕒 Publish scheduled posts - $(date -u +"%Y-%m-%d %H:%M UTC")"
+            git push
+          else
+            echo "No changes to commit"
+          fi
