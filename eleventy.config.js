@@ -22,6 +22,15 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Scheduled posts - only include posts marked as posted during build
+  // In dev mode, show all posts
+  // If 'posted' field is missing, treat it as false
+  eleventyConfig.addPreprocessor("scheduled", "*", (data, content) => {
+    if (process.env.ELEVENTY_RUN_MODE === "build" && data.posted !== true) {
+      return false;
+    }
+  });
+
   // PLUGINS
   // Syntax
   eleventyConfig.addPlugin(syntaxHighlight);
