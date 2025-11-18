@@ -2,11 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 function publishScheduledPosts() {
-  const postsDir = "src/blog";
+  const postsDir = "content/posts";
   const now = new Date();
   let hasNewPosts = false;
-
   const directoriesToScan = [postsDir];
+
 
   while (directoriesToScan.length > 0) {
     const currentDir = directoriesToScan.shift();

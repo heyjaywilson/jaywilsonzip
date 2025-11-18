@@ -25,7 +25,8 @@ export default function (eleventyConfig) {
   // Scheduled posts - only include posts marked as posted during build
   // In dev mode, show all posts
   // If 'posted' field is missing, treat it as false
-  eleventyConfig.addPreprocessor("scheduled", "*", (data, content) => {
+  // The workflow handles setting posted: true when the date arrives
+  eleventyConfig.addPreprocessor("scheduled", "posts/*", (data, content) => {
     if (process.env.ELEVENTY_RUN_MODE === "build" && data.posted !== true) {
       return false;
     }
@@ -103,12 +104,17 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("monthName", function (dateObj) {
-    let dateString = dateObj.toLocaleString("default", { month: "long", timeZone: "UTC" });
+    const date = dateObj instanceof Date ? dateObj : new Date(dateObj);
+    let dateString = date.toLocaleString("default", {
+      month: "long",
+      timeZone: "UTC",
+    });
     return dateString;
   });
 
   eleventyConfig.addFilter("year", function (dateObj) {
-    return dateObj.getUTCFullYear();
+    const date = dateObj instanceof Date ? dateObj : new Date(dateObj);
+    return date.getUTCFullYear();
   });
 
   // Filter for converting date to something that looks good on the post
@@ -118,7 +124,7 @@ export default function (eleventyConfig) {
       year: "numeric",
       month: "short",
       day: "numeric",
-      timeZone: "UTC"
+      timeZone: "UTC",
     });
   });
 
@@ -166,7 +172,7 @@ export default function (eleventyConfig) {
       posts: posts
         .filter(
           (post) =>
-            post.data.categories && post.data.categories.includes(category)
+            post.data.categories && post.data.categories.includes(category),
         )
         .sort((a, b) => b.date - a.date),
     }));
