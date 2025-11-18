@@ -1,0 +1,177 @@
+/* ============================================
+   Table Styles
+   ============================================ */
+
+/* Base table - targets ALL tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--spacing-lg) 0;
+  background-color: var(--color-black-dark);
+  border: 3px solid var(--color-ultra-violet);
+  font-size: 1rem;
+}
+
+/* Table header */
+thead {
+  background-color: var(--color-ultra-violet);
+  color: var(--color-black-dark);
+  font-weight: 900;
+  font-family: var(--font-mono);
+}
+
+th {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 3px solid var(--color-saffron);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+th:not(:last-child) {
+  border-right: 2px solid var(--color-saffron);
+}
+
+/* Table body */
+tbody tr {
+  transition: all 0.2s;
+}
+
+td {
+  padding: var(--spacing-md);
+  border-bottom: 2px solid var(--color-ultra-violet);
+}
+
+td:not(:last-child) {
+  border-right: 1px solid var(--color-slate);
+}
+
+/* Row hover effect */
+tbody tr:hover {
+  background-color: var(--color-pale-azure);
+  transform: translateX(-2px);
+}
+
+/* Last row - no bottom border */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================
+   Table Variants (use data attributes)
+   ============================================ */
+
+/* Striped variant */
+table[data-style="striped"] tbody tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--color-pale-azure) 10%, transparent);
+}
+
+table[data-style="striped"] tbody tr:nth-child(even):hover {
+  background-color: var(--color-pale-azure);
+}
+
+/* Compact variant */
+table[data-style="compact"] th,
+table[data-style="compact"] td {
+  padding: var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+/* Bold variant - extra thick borders */
+table[data-style="bold"] {
+  border-width: 5px;
+}
+
+table[data-style="bold"] th {
+  border-bottom-width: 5px;
+}
+
+table[data-style="bold"] th:not(:last-child) {
+  border-right-width: 3px;
+}
+
+/* Code variant - monospace content */
+table[data-style="code"] {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+table[data-style="code"] td {
+  background-color: var(--color-black);
+  color: var(--color-black-dark);
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 48rem) {
+  table {
+    font-size: 0.875rem;
+    border-width: 2px;
+  }
+
+  th,
+  td {
+    padding: var(--spacing-sm);
+  }
+
+  th {
+    font-size: 0.75rem;
+  }
+
+  /* Stack table on very small screens */
+  @media (max-width: 30rem) {
+    table[data-responsive="stack"] {
+      border: 0;
+    }
+
+    table[data-responsive="stack"] thead {
+      display: none;
+    }
+
+    table[data-responsive="stack"] tbody,
+    table[data-responsive="stack"] tr,
+    table[data-responsive="stack"] td {
+      display: block;
+      width: 100%;
+    }
+
+    table[data-responsive="stack"] tr {
+      border: 3px solid var(--color-ultra-violet);
+      margin-bottom: var(--spacing-md);
+      padding: var(--spacing-sm);
+      background-color: var(--color-black-dark);
+    }
+
+    table[data-responsive="stack"] td {
+      text-align: right;
+      padding: var(--spacing-sm);
+      position: relative;
+      border: none;
+      border-bottom: 1px solid var(--color-slate);
+    }
+
+    table[data-responsive="stack"] td:last-child {
+      border-bottom: none;
+    }
+
+    table[data-responsive="stack"] td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: var(--spacing-sm);
+      font-weight: 900;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--color-ultra-violet);
+    }
+
+    table[data-responsive="stack"] tbody tr:hover {
+      transform: translateX(0);
+    }
+  }
+}
+
