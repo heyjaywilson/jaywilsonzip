@@ -155,6 +155,66 @@ export default function (eleventyConfig) {
     });
   });
 
+  // Transform work data from resume.json to match template expectations
+  eleventyConfig.addFilter("transformWorkData", function (workArray) {
+    const resume = this.ctx.resume;
+    const awardMappings = resume.meta?.awardMappings || {};
+    const awards = resume.awards || [];
+
+    const transformed = workArray.map((work) => {
+      const achievements = [];
+      const responsibilities = [];
+      const achievementHighlightIndices = new Set();
+
+      // Find awards that map to this work entry
+      Object.entries(awardMappings).forEach(([awardId, mapping]) => {
+        if (mapping.workName === work.name) {
+          const award = awards.find((a) => a.id === awardId);
+          if (award && mapping.highlightIndex !== undefined) {
+            const year = new Date(award.date).getUTCFullYear();
+            achievements.push(`${year}: ${award.title} awarded by ${award.awarder}`);
+            achievementHighlightIndices.add(mapping.highlightIndex);
+          }
+        }
+      });
+
+      // Add highlights as responsibilities, excluding those that are achievements
+      if (work.highlights) {
+        work.highlights.forEach((highlight, index) => {
+          if (!achievementHighlightIndices.has(index)) {
+            responsibilities.push(highlight);
+          }
+        });
+      }
+
+      return {
+        ...work,
+        achievements: achievements.length > 0 ? achievements : null,
+        responsibilities: responsibilities.length > 0 ? responsibilities : null,
+      };
+    });
+
+    // Sort: Current jobs (no endDate) by startDate desc, then past jobs by endDate desc
+    return transformed.sort((a, b) => {
+      const aIsCurrent = !a.endDate;
+      const bIsCurrent = !b.endDate;
+
+      if (aIsCurrent && bIsCurrent) {
+        // Both current: sort by startDate descending (newest first)
+        return new Date(b.startDate) - new Date(a.startDate);
+      } else if (aIsCurrent) {
+        // a is current, b is not: a comes first
+        return -1;
+      } else if (bIsCurrent) {
+        // b is current, a is not: b comes first
+        return 1;
+      } else {
+        // Both past: sort by endDate descending (most recently ended first)
+        return new Date(b.endDate) - new Date(a.endDate);
+      }
+    });
+  });
+
   // Create a collection for each unique category defined in the postss
   eleventyConfig.addCollection("categoryPages", function (collectionApi) {
     const categories = new Set();

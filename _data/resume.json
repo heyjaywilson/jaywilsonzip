@@ -1,0 +1,203 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Jay Wilson",
+    "label": "Software Developer",
+    "email": "heyjay@omg.lol",
+    "url": "https://jaywilson.zip",
+    "summary": "Software developer with five years of experience in Swift and web technologies. Enjoys building software that gives the user the best experience possible."
+  },
+  "work": [
+    {
+      "name": "Matter Neuroscience",
+      "position": "iOS Developer",
+      "url": "https://matter.xyz",
+      "startDate": "2022-10-10",
+      "highlights": [
+        "Featured as App of the Day on the Apple App Store (2025)",
+        "Architected and maintained iOS application implementing photo journaling features with AI-powered happiness insights",
+        "Engineered end-to-end encrypted photo storage system using on-device encryption with AWS S3 backend, ensuring user privacy and data security",
+        "Integrated on-device Core ML models for advanced image processing, reducing server costs while maintaining user privacy through local computation",
+        "Designed offline-first architecture using Core Data and CloudKit synchronization, ensuring seamless user experience across devices with 99.9% data consistency",
+        "Automated user engagement pipeline using Supabase edge functions and Mailchimp integration, contributing to improved trial-to-paid conversions"
+      ],
+      "slogan": "Understand your happiness. Act accordingly.",
+      "icon": "📱",
+      "tools": [
+        "Swift",
+        "SwiftUI",
+        "CoreData",
+        "CloudKit",
+        "Amazon S3",
+        "Amazon DynamoDB",
+        "GitHub Actions",
+        "Supabase",
+        "Mailchimp",
+        "AppsFlyer",
+        "RevenueCat"
+      ]
+    },
+    {
+      "name": "Homeward",
+      "position": "Software Engineer",
+      "url": "https://homeward.com",
+      "startDate": "2021-07-01",
+      "endDate": "2022-09-30",
+      "highlights": [
+        "Developed and optimized company website using Webflow, improving page load times and user experience",
+        "Collaborated cross-functionally with design and marketing teams to implement A/B tests using Google Optimize, driving data-driven decisions that improved conversion rates",
+        "Enhanced customer-facing web application using React and Material UI, implementing responsive components with styled-components architecture"
+      ],
+      "slogan": "Take control of your move",
+      "icon": "💻",
+      "tools": [
+        "Webflow",
+        "Google Analytics",
+        "Google Optimize",
+        "JavaScript",
+        "React",
+        "Material UI",
+        "Styled Components"
+      ]
+    },
+    {
+      "name": "CCT Plus LLC",
+      "position": "Software Engineer",
+      "url": "https://cctplus.dev",
+      "startDate": "2019-08-01",
+      "highlights": [
+        "Extended functionality of production iOS applications using Swift and SwiftUI, delivering features for client projects on schedule",
+        "Architected full-stack applications leveraging Firebase for authentication and real-time data storage, reducing backend development time",
+        "Developed type-safe web applications using React, TypeScript, and Material UI, ensuring code quality and maintainability"
+      ],
+      "icon": "💻",
+      "tools": [
+        "Swift",
+        "SwiftUI",
+        "Core Data",
+        "CloudKit",
+        "Firebase",
+        "The Composable Architecture",
+        "React",
+        "TypeScript",
+        "Material UI",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Electronic Theatre Controls",
+      "position": "Product Support Specialist",
+      "url": "https://www.etcconnect.com/",
+      "startDate": "2016-09-01",
+      "endDate": "2021-07-01",
+      "highlights": [
+        "Delivered critical technical support for live production environments, maintaining high customer satisfaction during high-pressure situations",
+        "Implemented and scaled knowledge management system, reducing support ticket resolution time and improving team efficiency",
+        "Developed comprehensive training curriculum for Hog 4 console platform, enabling customers to maximize product utilization",
+        "Delivered technical training programs both virtually and on-site, successfully onboarding customers annually",
+        "Built React-based web tools for fixture configuration downloads, streamlining customer workflow and reducing support inquiries"
+      ],
+      "slogan": "Lighting and automation control systems for live events and entertainment.",
+      "icon": "☎️"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Mobile Development",
+      "level": "Advanced",
+      "keywords": ["Swift", "SwiftUI", "Core Data", "CoreData", "CloudKit"]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Material UI",
+        "Styled Components",
+        "Webflow"
+      ]
+    },
+    {
+      "name": "Cloud & Backend",
+      "level": "Intermediate",
+      "keywords": ["Firebase", "AWS", "Amazon S3", "Amazon DynamoDB"]
+    },
+    {
+      "name": "Tools & Workflow",
+      "level": "Intermediate",
+      "keywords": [
+        "GitHub Actions",
+        "Google Analytics",
+        "Google Optimize",
+        "The Composable Architecture"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "id": "onesignal-boost-2025",
+      "title": "5th Place - OneSignal Boost Award",
+      "date": "2025-10-13",
+      "awarder": "RevenueCat",
+      "summary": "Placed 5th out of over 800 entries for Camp Notes in the OneSignal integration category"
+    },
+    {
+      "id": "app-of-the-day-2025",
+      "title": "App of the Day",
+      "date": "2025-01-28",
+      "awarder": "Apple App Store",
+      "summary": "Matter Neuroscience iOS app featured as App of the Day"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas at Austin",
+      "url": "https://www.utexas.edu",
+      "area": "Theatre & Dance",
+      "studyType": "Bachelor of Arts",
+      "startDate": "2012",
+      "endDate": "2016"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Camp Notes",
+      "description": "Camp Notes helps you remember the best campsites, share experiences with friends, and discover new outdoor destinations with detailed site-level tracking.",
+      "url": "https://campnotes.app",
+      "startDate": "2025-09-19",
+      "keywords": [
+        "Swift",
+        "SwiftUI",
+        "Firebase",
+        "RevenueCat",
+        "TelemetryDeck"
+      ],
+      "type": "application",
+      "entity": "CCT Plus LLC"
+    },
+    {
+      "name": "iHog",
+      "description": "Turns an iOS Device into an OSC remote for Hog 4 consoles",
+      "url": "https://ihog.cctplus.dev/",
+      "startDate": "2020-08",
+      "keywords": ["Swift", "SwiftUI", "Core Data"],
+      "type": "application",
+      "entity": "CCT Plus LLC"
+    }
+  ],
+  "meta": {
+    "version": "1.0",
+    "lastModified": "2025-11-18",
+    "awardMappings": {
+      "app-of-the-day-2025": {
+        "workName": "Matter Neuroscience",
+        "highlightIndex": 0
+      },
+      "onesignal-boost-2025": {
+        "projectName": "Camp Notes"
+      }
+    }
+  }
+}

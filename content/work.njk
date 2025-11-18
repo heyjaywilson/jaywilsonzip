@@ -6,50 +6,50 @@ description: My work experience.
 
 <section class="work-container">
     <ul class="work__list">
-        {%- for work in collections.work | reverse -%}
+        {%- for work in resume.work | transformWorkData -%}
             <li class="work__item">
                 <div class="work-details">
-                    <h2 class="work__item-role">{{ work.data.role }}</h2>
-                    <h3 class="work__item-company">{{ work.data.company }}</h3>
-                    {# <p class="work__item-slogan">"{{ work.data.slogan }}"</p> #}
+                    <h2 class="work__item-role">{{ work.position }}</h2>
+                    <h3 class="work__item-company">{{ work.name }}</h3>
+                    {# <p class="work__item-slogan">"{{ work.slogan }}"</p> #}
                     <time class="work__item-date">
-                        {{ work.data.startDate | monthName }}
-                        {{ work.data.startDate | year }} -
-                        {% if work.data.endDate %}
-                            {{ work.data.endDate | monthName }}
-                            {{ work.data.endDate | year }}
+                        {{ work.startDate | monthName }}
+                        {{ work.startDate | year }} -
+                        {% if work.endDate %}
+                            {{ work.endDate | monthName }}
+                            {{ work.endDate | year }}
                         {% else %}
                             Present
                         {% endif %}
                     </time>
 
-                    {% if work.data.achievements %}
+                    {% if work.achievements %}
                         <div class="work__item-achievements">
                             <h3 class="work__item-achievements-label">🏆 Achievements</h3>
                             <ul class="work__item-achievements-list">
-                                {%- for achievement in work.data.achievements -%}
+                                {%- for achievement in work.achievements -%}
                                     <li class="work__item-achievement">{{ achievement }}</li>
                                 {%- endfor -%}
                             </ul>
                         </div>
                     {% endif %}
 
-                    {% if work.data.responsibilities %}
+                    {% if work.responsibilities %}
                         <div class="work__item-responsibilities">
                             <h3 class="work__item-responsibilities-label">📋 Responsibilities</h3>
                             <ul class="work__item-responsibilities-list">
-                                {%- for task in work.data.responsibilities -%}
+                                {%- for task in work.responsibilities -%}
                                     <li class="work__item-responsibility">{{ task }}</li>
                                 {%- endfor -%}
                             </ul>
                         </div>
                     {% endif %}
 
-                    {% if work.data.tools %}
+                    {% if work.tools %}
                         <div class="work__item-responsibilities">
                             <h3 class="work__item-responsibilities-label">🛠️ Tools</h3>
                             <ul class="work__item-tools-list">
-                                {%- for tool in work.data.tools -%}
+                                {%- for tool in work.tools -%}
                                     <li class="work__item-tool">{{ tool }}</li>
                                 {%- endfor -%}
                             </ul>
