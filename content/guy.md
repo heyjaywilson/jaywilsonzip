@@ -2,7 +2,7 @@
 layout: slashpage.njk
 title: /guy
 description: Just a guy who likes to do things.
-lastUpdated: 2025-01-16
+lastUpdated: 2025-11-18
 ---
 
 Sometimes people say "I'm a XYZ guy" and I like that phrase, so here's a collection of interests.
@@ -12,8 +12,10 @@ Sometimes people say "I'm a XYZ guy" and I like that phrase, so here's a collect
 - I'm a mirrorless camera guy.
 - I'm a whiskey guy.
 - I'm an Apple guy.
+- I'm an apple guy.
 - I'm a cat guy.
 - I'm a dog guy.
 - I'm a Jeep guy.
+- I'm a beer guy.
 
 I'm sure there are more that I'm missing but I'll update this later.
