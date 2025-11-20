@@ -1,0 +1,293 @@
+/* Resume Page Styles - right column uses white boxes like work page */
+
+/* Mobile layout ordering - sections reorder for better mobile UX */
+@media (max-width: 48rem) {
+    /* Summary section (hero) comes first - order: 1 */
+    .resume-section--summary {
+        order: 1;
+    }
+
+    /* Contact section comes second - order: 2 */
+    .resume-subsection--contact {
+        order: 2;
+    }
+
+    /* Main content column comes third - order: 3 */
+    .resume-section--main {
+        order: 3;
+    }
+
+    /* Work Experience within main - order: 3.1 */
+    .resume-subsection--work {
+        order: 1;
+    }
+
+    /* Education within main - order: 3.2 */
+    .resume-subsection--education {
+        order: 2;
+    }
+
+    /* Sidebar comes fourth - order: 4 */
+    .resume-section--sidebar {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Skills within sidebar - order: 4.1 */
+    .resume-subsection--skills {
+        order: 1;
+    }
+
+    /* Awards within sidebar - order: 4.2 */
+    .resume-subsection--awards {
+        order: 2;
+    }
+}
+
+/* Resume-specific page container width */
+@media (min-width: 64rem) {
+    .page__container--resume {
+        grid-template-columns: 400px 1fr;
+    }
+}
+
+/* Container for single-item sections (Contact, Skills) - matches .resume__list structure */
+.resume__section-content {
+    padding: 0;
+    margin: 0;
+}
+
+/* List container for all sections */
+.resume__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* White box item - used for all sections */
+.resume__item {
+    border: 3px solid var(--color-ultra-violet);
+    padding: var(--spacing-lg);
+    background-color: var(--color-black-dark);
+    transition: all 0.2s;
+}
+
+.resume__item:hover {
+    transform: translate(-0.5rem, -0.5rem);
+    box-shadow:
+        0.5rem 0.5rem 0 var(--color-saffron),
+        1rem 1rem 0 var(--color-ultra-violet),
+        1.5rem 1.5rem 0 var(--color-cyclamen),
+        2rem 2rem 0 var(--color-pale-azure);
+}
+
+.resume__item h3:first-child {
+    margin-top: 0;
+}
+
+/* Work experience specific styles */
+.resume-job__position {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.resume-job__company {
+    margin: var(--spacing-xs) 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.resume-job__date {
+    font-size: 0.95rem;
+    font-weight: 400;
+    display: block;
+    margin-top: var(--spacing-xs);
+}
+
+.resume-job__highlights {
+    list-style-type: disc;
+    padding-left: var(--spacing-xl);
+    margin: var(--spacing-md) 0;
+}
+
+.resume-job__highlights li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+/* Projects Toggle */
+.resume-job__projects {
+    margin-top: var(--spacing-lg);
+}
+
+.resume-job__projects-toggle {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.95rem;
+    user-select: none;
+    list-style: none;
+    background-color: var(--color-black);
+    color: var(--color-black-dark);
+    border: 2px solid var(--color-ultra-violet);
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.resume-job__projects-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.resume-job__projects-toggle::before {
+    content: "▶ ";
+    display: inline;
+}
+
+.resume-job__projects[open] .resume-job__projects-toggle::before {
+    content: "▼ ";
+}
+
+.resume-job__projects-toggle:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--color-ultra-violet);
+}
+
+.resume-job__projects-content {
+    margin-top: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+}
+
+.resume-project {
+    margin-bottom: var(--spacing-md);
+}
+
+.resume-project:last-child {
+    margin-bottom: 0;
+}
+
+.resume-project__name {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.resume-project__description {
+    margin: var(--spacing-xs) 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Education specific styles */
+.resume-edu__degree {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.resume-edu__institution {
+    margin: var(--spacing-xs) 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.resume-edu__area {
+    margin: var(--spacing-xs) 0;
+    font-size: 0.95rem;
+}
+
+.resume-edu__date {
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: block;
+    margin-top: var(--spacing-xs);
+}
+
+/* Summary specific styles */
+.resume-summary p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Skills specific styles */
+.resume-skill {
+    margin-bottom: var(--spacing-xl);
+}
+
+.resume-skill:last-child {
+    margin-bottom: 0;
+}
+
+.resume-skill h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-skill__keywords {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Contact specific styles */
+.resume__item p {
+    margin: var(--spacing-sm) 0;
+}
+
+.resume-contact__profiles {
+    margin-top: var(--spacing-lg);
+}
+
+.resume-contact__profiles h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-contact__profiles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-contact__profiles li {
+    margin: var(--spacing-xs) 0;
+}
+
+/* Awards specific styles */
+.resume-award-year {
+    margin-bottom: var(--spacing-xl);
+}
+
+.resume-award-year:last-child {
+    margin-bottom: 0;
+}
+
+.resume-award-year h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-award {
+    margin-bottom: var(--spacing-md);
+}
+
+.resume-award:last-child {
+    margin-bottom: 0;
+}
+
+/* Reduce spacing between title and awarder */
+.resume-award > div p {
+    margin: calc(var(--spacing-sm) / 2) 0;
+}
+
+/* Lighter font weight and smaller font size for awarder */
+.resume-award > div p:last-child {
+    font-weight: 300;
+    font-size: 0.9rem;
+}

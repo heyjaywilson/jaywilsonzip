@@ -5,7 +5,30 @@
     "label": "Software Developer",
     "email": "heyjay@omg.lol",
     "url": "https://jaywilson.zip",
-    "summary": "Software developer with five years of experience in Swift and web technologies. Enjoys building software that gives the user the best experience possible."
+    "location": {
+      "postalCode": "WA 98660",
+      "city": "Vancouver",
+      "countryCode": "US",
+      "region": "Washington"
+    },
+    "summary": "Software developer with 5+ years of experience building high-quality iOS applications and full-stack web solutions. Specializes in Swift, SwiftUI, and modern web technologies. Proven track record of architecting scalable applications, implementing offline-first architectures, and delivering features that prioritize exceptional user experience and data security.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Jay Wilson",
+        "url": "https://linkedin.com/in/heyjaywilson"
+      },
+      {
+        "network": "GitHub",
+        "username": "heyjaywilson",
+        "url": "https://github.com/heyjaywilson"
+      },
+      {
+        "network": "Threads",
+        "username": "heyjaywilson",
+        "url": "https://threads.net/@heyjaywilson"
+      }
+    ]
   },
   "work": [
     {
@@ -26,7 +49,7 @@
       "tools": [
         "Swift",
         "SwiftUI",
-        "CoreData",
+        "Core Data",
         "CloudKit",
         "Amazon S3",
         "Amazon DynamoDB",
@@ -103,35 +126,40 @@
   ],
   "skills": [
     {
-      "name": "Mobile Development",
-      "level": "Advanced",
-      "keywords": ["Swift", "SwiftUI", "Core Data", "CoreData", "CloudKit"]
+      "name": "Languages",
+      "keywords": ["Swift", "TypeScript", "JavaScript"]
     },
     {
-      "name": "Web Development",
-      "level": "Advanced",
+      "name": "Mobile Development",
       "keywords": [
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "Material UI",
-        "Styled Components",
-        "Webflow"
+        "SwiftUI",
+        "Core Data",
+        "The Composable Architecture",
+        ""
       ]
     },
     {
+      "name": "Web Development",
+      "keywords": ["React", "Material UI", "Styled Components", "Webflow"]
+    },
+    {
       "name": "Cloud & Backend",
-      "level": "Intermediate",
-      "keywords": ["Firebase", "AWS", "Amazon S3", "Amazon DynamoDB"]
+      "keywords": [
+        "Hummingbird",
+        "AWS",
+        "Firebase",
+        "Supabase",
+        "PostgreSQL",
+        "CloudKit"
+      ]
     },
     {
       "name": "Tools & Workflow",
-      "level": "Intermediate",
       "keywords": [
         "GitHub Actions",
         "Google Analytics",
         "Google Optimize",
-        "The Composable Architecture"
+        "Bitrise"
       ]
     }
   ],
@@ -140,8 +168,8 @@
       "id": "onesignal-boost-2025",
       "title": "5th Place - OneSignal Boost Award",
       "date": "2025-10-13",
-      "awarder": "RevenueCat",
-      "summary": "Placed 5th out of over 800 entries for Camp Notes in the OneSignal integration category"
+      "awarder": "RevenueCat & One Signal",
+      "summary": "Placed 5th out of over 800 entries for Camp Notes in the OneSignal integration category of Shipaton"
     },
     {
       "id": "app-of-the-day-2025",
@@ -188,7 +216,7 @@
     }
   ],
   "meta": {
-    "version": "1.0",
+    "version": "1.0.0",
     "lastModified": "2025-11-18",
     "awardMappings": {
       "app-of-the-day-2025": {

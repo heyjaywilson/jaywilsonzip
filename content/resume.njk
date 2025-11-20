@@ -1,0 +1,182 @@
+---
+layout: base.njk
+title: Resume
+description: My professional resume and experience.
+---
+
+{# Summary - full width hero section #}
+<section class="hero resume-section resume-section--summary">
+    <div class="hero__content">
+        <p>{{ resume.basics.summary }}</p>
+    </div>
+</section>
+
+<div class="page__container page__container--resume">
+    {# Left Column - Sidebar #}
+    <div class="page__left resume-section resume-section--sidebar">
+        {# Contact & Profiles #}
+        <section class="content-section resume-subsection resume-subsection--contact">
+            <h2>Contact</h2>
+            <div class="resume__section-content">
+                <div class="resume__item">
+                    <p><i class="fa-solid fa-location-dot"></i> {{ resume.basics.location.city }}, {{ resume.basics.location.region }}</p>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:{{ resume.basics.email }}">{{ resume.basics.email }}</a></p>
+                    <p><i class="fa-solid fa-globe"></i> <a href="{{ resume.basics.url }}" target="_blank">{{ resume.basics.url }}</a></p>
+                    <p><i class="fa-brands fa-linkedin"></i> <a href="{{ resume.basics.profiles[0].url }}" target="_blank">{{ resume.basics.profiles[0].network }}</a></p>
+                    <p><i class="fa-brands fa-github"></i> <a href="{{ resume.basics.profiles[1].url }}" target="_blank">{{ resume.basics.profiles[1].network }}</a></p>
+                    <p><i class="fa-brands fa-threads"></i> <a href="{{ resume.basics.profiles[2].url }}" target="_blank">{{ resume.basics.profiles[2].network }}</a></p>
+                </div>
+            </div>
+        </section>
+
+        {# Skills #}
+        <section class="content-section resume-subsection resume-subsection--skills">
+            <h2>Skills</h2>
+            <div class="resume__section-content">
+                <div class="resume__item">
+                    {%- for skill in resume.skills -%}
+                        <div class="resume-skill">
+                            <h3>{{ skill.name }}</h3>
+                            <ul class="resume-skill__keywords">
+                                {%- for keyword in skill.keywords -%}
+                                    <li>{{ keyword }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </section>
+
+        {# Awards #}
+        <section class="content-section resume-subsection resume-subsection--awards">
+            <h2>Awards</h2>
+            <div class="resume__section-content">
+                <div class="resume__item">
+                    {# Sort awards by date, newest to oldest and group by year #}
+                    {%- set sortedAwards = resume.awards | sort(false, false, 'date') | reverse -%}
+                    {%- set currentYear = null -%}
+                    {%- for award in sortedAwards -%}
+                        {% set awardYear = award.date | year %}
+                        {%- if awardYear != currentYear -%}
+                            {%- if currentYear != null -%}
+                                </div>{# Close previous year div #}
+                            {%- endif -%}
+                            <div class="resume-award-year">
+                                <h3>{{ awardYear }}</h3>
+                            {%- set currentYear = awardYear -%}
+                        {%- endif -%}
+                        <div class="resume-award">
+                            <div>
+                                <p><strong>{{ award.title }}</strong> </p>
+                                <p> {{ award.awarder }}</p>
+                            </div>
+                            <p>{{ award.summary }}</p>
+                        </div>
+                    {%- endfor -%}
+                    {%- if currentYear != null -%}
+                        </div>{# Close last year div #}
+                    {%- endif -%}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {# Right Column - Main Content #}
+    <div class="page__right resume-section resume-section--main">
+        {# Work Experience #}
+        <section class="content-section resume-subsection resume-subsection--work">
+            <h2>Work Experience</h2>
+            <ul class="resume__list">
+                {# Sort work: ongoing (no endDate) first by startDate desc, then completed by endDate desc #}
+                {%- set sortedWork = resume.work | sort(false, false, 'startDate') | reverse -%}
+                {%- set ongoingWork = [] -%}
+                {%- set completedWork = [] -%}
+                {%- for work in sortedWork -%}
+                    {%- if work.endDate -%}
+                        {%- set completedWork = (completedWork.push(work), completedWork) -%}
+                    {%- else -%}
+                        {%- set ongoingWork = (ongoingWork.push(work), ongoingWork) -%}
+                    {%- endif -%}
+                {%- endfor -%}
+                {%- set sortedWork = ongoingWork.concat(completedWork) -%}
+                {%- for work in sortedWork -%}
+                    <li class="resume__item">
+                        <h3 class="resume-job__position">{{ work.position }}</h3>
+                        <h4 class="resume-job__company">{{ work.name }}</h4>
+                        <time class="resume-job__date">
+                            {{ work.startDate | monthName }} {{ work.startDate | year }} -
+                            {% if work.endDate %}
+                                {{ work.endDate | monthName }} {{ work.endDate | year }}
+                            {% else %}
+                                Present
+                            {% endif %}
+                        </time>
+
+                        {% if work.highlights %}
+                            <ul class="resume-job__highlights">
+                                {%- for highlight in work.highlights -%}
+                                    <li>{{ highlight }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        {% endif %}
+
+                        {# Check if there are related projects #}
+                        {% set relatedProjects = [] %}
+                        {%- for project in resume.projects -%}
+                            {% if project.entity == work.name %}
+                                {% set relatedProjects = (relatedProjects.push(project), relatedProjects) %}
+                            {% endif %}
+                        {%- endfor -%}
+
+                        {% if relatedProjects.length > 0 %}
+                            <details class="resume-job__projects">
+                                <summary class="resume-job__projects-toggle">
+                                    Related Projects ({{ relatedProjects.length }})
+                                </summary>
+                                <div class="resume-job__projects-content">
+                                    {%- for project in relatedProjects -%}
+                                        <div class="resume-project">
+                                            <h4 class="resume-project__name">
+                                                {% if project.url %}
+                                                    <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+                                                {% else %}
+                                                    {{ project.name }}
+                                                {% endif %}
+                                            </h4>
+                                            <p class="resume-project__description">{{ project.description }}</p>
+                                            {% if project.keywords %}
+                                                <p class="resume-project__tech"><strong>Tech: </strong>
+                                                {%- for keyword in project.keywords -%}
+                                                    {{ keyword }}{% if not loop.last %}, {% endif %}
+                                                {%- endfor -%}
+                                                </p>
+                                            {% endif %}
+                                        </div>
+                                    {%- endfor -%}
+                                </div>
+                            </details>
+                        {% endif %}
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </section>
+
+        {# Education #}
+        <section class="content-section resume-subsection resume-subsection--education">
+            <h2>Education</h2>
+            <ul class="resume__list">
+                {%- for edu in resume.education -%}
+                    <li class="resume__item">
+                        <h3 class="resume-edu__degree">{{ edu.studyType }}</h3>
+                        <h4 class="resume-edu__institution">{{ edu.institution }}</h4>
+                        <p class="resume-edu__area">{{ edu.area }}</p>
+                        <time class="resume-edu__date">
+                            {{ edu.startDate }} - {{ edu.endDate }}
+                        </time>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </section>
+    </div>
+</div>
