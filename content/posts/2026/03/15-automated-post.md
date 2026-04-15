@@ -5,7 +5,7 @@ date: 2026-03-15
 categories: [ai, workflow, jaba]
 ---
 
-JABA has three active repos: iOS, backend, and website. Meaningful work ships across all of them every two weeks, and users and newsletter subscribers deserve to know what changed. Consistent content about what's being built matters for SEO too. The problem was that writing updates kept falling off my plate. I'd miss a cycle, feel behind, and the gap would grow.
+[JABA](https://jaba.cctplus.dev) has three active repos: iOS, backend, and website. Meaningful work ships across all of them every two weeks, and users and newsletter subscribers deserve to know what changed. Consistent content about what's being built matters for SEO too. The problem was that writing updates kept falling off my plate. I'd miss a cycle, feel behind, and the gap would grow.
 
 I built a pipeline to fix that. It pulls from all three repos, collects merged PRs and commits, and turns them into a published blog post every two weeks without me writing anything.
 
